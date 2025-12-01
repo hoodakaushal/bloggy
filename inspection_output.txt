@@ -1,0 +1,213 @@
+
+Running 3 tests using 3 workers
+
+[1A[2K[1/3] [firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+[1A[2K[2/3] [chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+[1A[2K[3/3] [webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== CLICKING READ MORE ===
+
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== CLICKING READ MORE ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== CLICKING READ MORE ===
+
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Current URL: http://localhost:5173/blog/15
+
+[1A[2K
+=== BLOG POST PAGE ===
+
+[1A[2KH1: Test Blog Post 1764573819108
+
+[1A[2K
+Buttons on page:
+
+[1A[2K  - "Post Comment"
+
+[1A[2K
+Textareas: 2, Inputs: 1
+
+[1A[2KForms: 1
+
+[1A[2K
+=== LOGGING IN AS ADMIN ===
+
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Current URL: http://localhost:5173/blog/15
+
+[1A[2K
+=== BLOG POST PAGE ===
+
+[1A[2KH1: Test Blog Post 1764573819108
+
+[1A[2K
+Buttons on page:
+
+[1A[2K  - "Post Comment"
+
+[1A[2K
+Textareas: 2, Inputs: 1
+
+[1A[2KForms: 1
+
+[1A[2K
+=== LOGGING IN AS ADMIN ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Current URL: http://localhost:5173/blog/15
+
+[1A[2K
+=== BLOG POST PAGE ===
+
+[1A[2KH1: Test Blog Post 1764573819108
+
+[1A[2K
+Buttons on page:
+
+[1A[2K  - "Post Comment"
+
+[1A[2K
+Textareas: 2, Inputs: 1
+
+[1A[2KForms: 1
+
+[1A[2K
+=== LOGGING IN AS ADMIN ===
+
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+After login URL: http://localhost:5173/login
+
+[1A[2K
+=== NAVIGATING TO DASHBOARD ===
+
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+After login URL: http://localhost:5173/admin
+
+[1A[2K
+=== NAVIGATING TO DASHBOARD ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+After login URL: http://localhost:5173/admin
+
+[1A[2K
+=== NAVIGATING TO DASHBOARD ===
+
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== NAVIGATING TO CREATE POST ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== NAVIGATING TO CREATE POST ===
+
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== NAVIGATING TO CREATE POST ===
+
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Create post URL: http://localhost:5173/admin/blog/new
+
+[1A[2K
+=== INSPECTING CATEGORY SELECT ===
+
+[1A[2KCategory Label count: 0
+
+[1A[2KCategory Select (.MuiSelect-select) count: 2
+
+[1A[2KCategory Combobox count: 0
+
+[1A[2KCategory Select HTML: <div tabindex="0" role="combobox" aria-controls=":rd:" aria-expanded="false" aria-haspopup="listbox" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-10l5tdt-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"><span class="notranslate">​</span></div>
+
+[1A[2K
+=== INSPECTING PUBLISH BUTTON ===
+
+[1A[2KPublish Button (Role) count: 2
+
+[1A[2KPublish Button (XPath) count: 1
+
+[1A[2KPublish Button (Role) HTML: <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ueukts-MuiButtonBase-root-MuiToggleButton-root" tabindex="0" type="button" value="published" aria-pressed="false" aria-label="published">Published<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+
+[1A[2KPublish Button (Role) Disabled: false
+
+[1A[2KPublish Button (XPath) HTML: <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="button" disabled=""><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PublishIcon"><path d="M5 4v2h14V4zm0 10h4v6h6v-6h4l-7-7z"></path></svg></span>Publish Now</button>
+
+[1A[2KPublish Button (XPath) Disabled: true
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Create post URL: http://localhost:5173/admin/blog/new
+
+[1A[2K
+=== INSPECTING CATEGORY SELECT ===
+
+[1A[2KCategory Label count: 0
+
+[1A[2KCategory Select (.MuiSelect-select) count: 2
+
+[1A[2KCategory Combobox count: 0
+
+[1A[2KCategory Select HTML: <div tabindex="0" role="combobox" aria-controls=":rd:" aria-expanded="false" aria-haspopup="listbox" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-10l5tdt-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"><span class="notranslate">​</span></div>
+
+[1A[2K
+=== INSPECTING PUBLISH BUTTON ===
+
+[1A[2KPublish Button (Role) count: 2
+
+[1A[2KPublish Button (XPath) count: 1
+
+[1A[2KPublish Button (Role) HTML: <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ueukts-MuiButtonBase-root-MuiToggleButton-root" tabindex="0" type="button" value="published" aria-pressed="false" aria-label="published">Published<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+
+[1A[2KPublish Button (Role) Disabled: false
+
+[1A[2KPublish Button (XPath) HTML: <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="button" disabled=""><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PublishIcon"><path d="M5 4v2h14V4zm0 10h4v6h6v-6h4l-7-7z"></path></svg></span>Publish Now</button>
+
+[1A[2KPublish Button (XPath) Disabled: true
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Create post URL: http://localhost:5173/admin/blog/new
+
+[1A[2K
+=== INSPECTING CATEGORY SELECT ===
+
+[1A[2KCategory Label count: 0
+
+[1A[2KCategory Select (.MuiSelect-select) count: 2
+
+[1A[2KCategory Combobox count: 0
+
+[1A[2KCategory Select HTML: <div tabindex="0" role="combobox" aria-controls=":rd:" aria-expanded="false" aria-haspopup="listbox" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-10l5tdt-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"><span class="notranslate">​</span></div>
+
+[1A[2K
+=== INSPECTING PUBLISH BUTTON ===
+
+[1A[2KPublish Button (Role) count: 2
+
+[1A[2KPublish Button (XPath) count: 1
+
+[1A[2KPublish Button (Role) HTML: <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ueukts-MuiButtonBase-root-MuiToggleButton-root" tabindex="0" type="button" value="published" aria-pressed="false" aria-label="published">Published<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+
+[1A[2KPublish Button (Role) Disabled: false
+
+[1A[2KPublish Button (XPath) HTML: <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="button" disabled=""><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PublishIcon"><path d="M5 4v2h14V4zm0 10h4v6h6v-6h4l-7-7z"></path></svg></span>Publish Now</button>
+
+[1A[2KPublish Button (XPath) Disabled: true
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K  3 passed (12.8s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

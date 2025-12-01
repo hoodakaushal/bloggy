@@ -1,0 +1,95 @@
+
+Running 33 tests using 5 workers
+
+[1A[2K[1/33] [chromium] › tests/security.spec.ts:77:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[2/33] [chromium] › tests/security.spec.ts:64:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[3/33] [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[4/33] [chromium] › tests/gremlin.spec.ts:38:5 › Gremlin (Chaos) Tests › should survive chaos on home page
+[1A[2K[5/33] [chromium] › tests/gremlin.spec.ts:60:5 › Gremlin (Chaos) Tests › should survive chaos on admin dashboard
+[1A[2K[6/33] [chromium] › tests/security.spec.ts:98:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[7/33] [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[8/33] [chromium] › tests/visual.spec.ts:96:5 › Visual Regression Tests › login page snapshot
+[1A[2K[9/33] [chromium] › tests/visual.spec.ts:102:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[10/33] [chromium] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot
+[1A[2K[11/33] [chromium] › tests/visual.spec.ts:214:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[12/33] [firefox] › tests/gremlin.spec.ts:38:5 › Gremlin (Chaos) Tests › should survive chaos on home page
+[1A[2K[13/33] [firefox] › tests/gremlin.spec.ts:60:5 › Gremlin (Chaos) Tests › should survive chaos on admin dashboard
+[1A[2K  1) [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('This is a test comment')
+    Expected: visible
+    Error: strict mode violation: getByText('This is a test comment') resolved to 2 elements:
+        1) <textarea rows="4" id=":r9:" required="" aria-invalid="false" aria-describedby=":r9:-helper-text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input">This is a test comment <script>alert("XSS")</scri…</textarea> aka getByRole('textbox', { name: 'Your Comment' })
+        2) <span class="MuiTypography-root MuiTypography-body2 css-e784if-MuiTypography-root">This is a test comment </span> aka getByText('This is a test comment', { exact: true })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('This is a test comment')[22m
+
+
+      52 |
+      53 |         // Wait for comment to appear
+    > 54 |         await expect(page.getByText(safeComment)).toBeVisible();
+         |                                                   ^
+      55 |
+      56 |         expect(dialogTriggered).toBe(false);
+      57 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:54:51
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-chromium/error-context.md
+
+
+[1A[2K[14/33] [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[15/33] [firefox] › tests/security.spec.ts:64:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[16/33] [firefox] › tests/security.spec.ts:77:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[17/33] [firefox] › tests/security.spec.ts:98:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[18/33] [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[19/33] [firefox] › tests/visual.spec.ts:96:5 › Visual Regression Tests › login page snapshot
+[1A[2K[20/33] [firefox] › tests/visual.spec.ts:102:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[21/33] [firefox] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot
+[1A[2K[22/33] [firefox] › tests/visual.spec.ts:214:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[23/33] [webkit] › tests/gremlin.spec.ts:38:5 › Gremlin (Chaos) Tests › should survive chaos on home page
+[1A[2K[24/33] [webkit] › tests/gremlin.spec.ts:60:5 › Gremlin (Chaos) Tests › should survive chaos on admin dashboard
+[1A[2K[25/33] [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[26/33] [webkit] › tests/security.spec.ts:64:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[27/33] [webkit] › tests/security.spec.ts:77:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[28/33] [webkit] › tests/security.spec.ts:98:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[29/33] [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[30/33] [webkit] › tests/visual.spec.ts:96:5 › Visual Regression Tests › login page snapshot
+[1A[2K[31/33] [webkit] › tests/visual.spec.ts:102:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[32/33] [webkit] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot
+[1A[2K[33/33] [webkit] › tests/visual.spec.ts:214:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  2) [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('<script>alert("XSS")</script>')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByText('<script>alert("XSS")</script>')[22m
+
+
+      58 |         // 5. Verify the payload is displayed as text (escaped) or sanitized
+      59 |         // It should be visible as text content, meaning it was escaped
+    > 60 |         await expect(page.getByText(xssPayload)).toBeVisible();
+         |                                                  ^
+      61 |
+      62 |     });
+      63 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:60:50
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-webkit/error-context.md
+
+
+[1A[2K  2 failed
+    [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+    [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ───
+  31 passed (38.2s)
+
+[36m  Serving HTML report at http://localhost:49239. Press Ctrl+C to quit.[39m

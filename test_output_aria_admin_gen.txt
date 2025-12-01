@@ -1,0 +1,56 @@
+
+Running 15 tests using 5 workers
+
+[1A[2K[1/15] [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[2/15] [chromium] › tests/visual.spec.ts:96:5 › Visual Regression Tests › login page snapshot
+[1A[2K[3/15] [chromium] › tests/visual.spec.ts:102:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[4/15] [chromium] › tests/visual.spec.ts:153:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[5/15] [chromium] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot
+[1A[2K[6/15] [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[7/15] [firefox] › tests/visual.spec.ts:96:5 › Visual Regression Tests › login page snapshot
+[1A[2K[8/15] [firefox] › tests/visual.spec.ts:102:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[9/15] [firefox] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot
+[1A[2K[10/15] [firefox] › tests/visual.spec.ts:153:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[11/15] [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[12/15] [webkit] › tests/visual.spec.ts:96:5 › Visual Regression Tests › login page snapshot
+[1A[2K[13/15] [webkit] › tests/visual.spec.ts:102:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[14/15] [webkit] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot
+[1A[2K  1) [chromium] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot 
+
+    Error: A snapshot doesn't exist at tests/visual.spec.ts-snapshots/Visual-Regression-Tests-admin-dashboard-aria-snapshot-1.aria.yml, writing actual.
+
+      146 |         await page.waitForLoadState('networkidle');
+      147 |         // Use Aria snapshot for dynamic content (table)
+    > 148 |         await expect(page.locator('body')).toMatchAriaSnapshot();
+          |         ^
+      149 |     });
+      150 |
+      151 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:148:9
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-aria-snapshot-chromium/error-context.md
+
+
+[1A[2K[15/15] [webkit] › tests/visual.spec.ts:153:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  2) [firefox] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot 
+
+    Error: A snapshot doesn't exist at tests/visual.spec.ts-snapshots/Visual-Regression-Tests-admin-dashboard-aria-snapshot-1.aria.yml, writing actual.
+
+      146 |         await page.waitForLoadState('networkidle');
+      147 |         // Use Aria snapshot for dynamic content (table)
+    > 148 |         await expect(page.locator('body')).toMatchAriaSnapshot();
+          |         ^
+      149 |     });
+      150 |
+      151 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:148:9
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-aria-snapshot-firefox/error-context.md
+
+
+[1A[2K  2 failed
+    [chromium] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot 
+    [firefox] › tests/visual.spec.ts:143:5 › Visual Regression Tests › admin dashboard aria snapshot 
+  13 passed (10.9s)
+
+[36m  Serving HTML report at http://localhost:64403. Press Ctrl+C to quit.[39m

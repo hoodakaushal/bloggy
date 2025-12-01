@@ -60,11 +60,15 @@ export default function AdminDashboard() {
     if (!blogToDelete) return;
 
     try {
+      console.log('Deleting blog:', blogToDelete);
       await blogApi.delete(blogToDelete);
+      console.log('Blog deleted successfully');
       setDeleteDialogOpen(false);
       setBlogToDelete(null);
       await fetchBlogs();
+      console.log('Blogs refreshed');
     } catch (err: any) {
+      console.error('Delete error:', err);
       setError(err.response?.data?.error || 'Failed to delete blog');
     }
   };
@@ -96,8 +100,9 @@ export default function AdminDashboard() {
           variant="contained"
           startIcon={<Add />}
           onClick={() => navigate('/admin/blog/new')}
+          aria-label="Create New Post"
         >
-          New Blog Post
+          Create New Post
         </Button>
       </Box>
 

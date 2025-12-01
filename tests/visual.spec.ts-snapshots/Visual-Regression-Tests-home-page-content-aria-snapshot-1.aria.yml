@@ -1,0 +1,85 @@
+- banner:
+  - link "Blog App":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Admin Login":
+    - /url: /login
+  - button "toggle theme"
+- heading "Welcome to Our Blog" [level=1]
+- textbox "Search blogs..."
+- text: Category
+- combobox
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 8 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 4 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 2 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ \d+ 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 2 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 2 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 1 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 2 0 1/
+  - button "Read More"
+- article:
+  - heading /XSS Test Blog \d+/ [level=2]
+  - text: Technology
+  - paragraph: Testing XSS vulnerability in comments
+  - text: /December 1, \d+ 2 0 1/
+  - button "Read More"
+- navigation "pagination navigation":
+  - list:
+    - listitem:
+      - button "Go to previous page" [disabled]
+    - listitem:
+      - button "page 1"
+    - listitem:
+      - button "Go to page 2"
+    - listitem:
+      - button "Go to page 3"
+    - listitem:
+      - button "Go to page 4"
+    - listitem:
+      - button "Go to page 5"
+    - listitem: …
+    - listitem:
+      - button /Go to page \d+/
+    - listitem:
+      - button "Go to next page"

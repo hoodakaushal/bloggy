@@ -1,0 +1,18 @@
+- banner:
+  - link "Blog App":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Admin Login":
+    - /url: /login
+  - button "toggle theme"
+- heading "Admin Panel" [level=1]
+- tablist:
+  - tab "Login" [selected]
+  - tab "Register"
+- tabpanel:
+  - text: Username
+  - textbox "Username"
+  - text: Password
+  - textbox "Password"
+  - button "Login"

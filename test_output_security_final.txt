@@ -1,0 +1,21 @@
+
+Running 12 tests using 5 workers
+
+[1A[2K[1/12] [chromium] › tests/security.spec.ts:98:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[2/12] [chromium] › tests/security.spec.ts:77:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[3/12] [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[4/12] [chromium] › tests/security.spec.ts:64:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[5/12] [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[6/12] [firefox] › tests/security.spec.ts:64:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[7/12] [firefox] › tests/security.spec.ts:77:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[8/12] [firefox] › tests/security.spec.ts:98:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[9/12] [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[10/12] [webkit] › tests/security.spec.ts:64:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[11/12] [webkit] › tests/security.spec.ts:77:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[12/12] [webkit] › tests/security.spec.ts:98:5 › Security Tests › should prevent unauthorized API access
+[1A[2K  12 passed (9.3s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

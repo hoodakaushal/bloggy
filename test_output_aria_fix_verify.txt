@@ -1,0 +1,421 @@
+
+Running 18 tests using 5 workers
+
+[1A[2K[1/18] [chromium] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[2/18] [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[3/18] [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[4/18] [chromium] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K[5/18] [chromium] › tests/visual.spec.ts:47:5 › Visual Regression Tests › home page aria snapshot
+[1A[2K[6/18] [chromium] › tests/visual.spec.ts:59:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  1) [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ──────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      Expected an image 1280px by 1205px, received 1280px by 1145px. 63453 pixels (ratio 0.05 of all image pixels) are different.
+
+      Snapshot: home-page.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(home-page.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - Expected an image 1280px by 1205px, received 1280px by 1145px. 63453 pixels (ratio 0.05 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - Expected an image 1280px by 1205px, received 1280px by 1145px. 63453 pixels (ratio 0.05 of all image pixels) are different.[22m
+
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Mask dynamic content like dates or random IDs if necessary
+    > 10 |         await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
+         |                            ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:28
+
+    attachment #1: home-page (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/home-page-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-home-page-snapshot-chromium/home-page-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-home-page-snapshot-chromium/home-page-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-home-page-snapshot-chromium/error-context.md
+
+
+[1A[2K  2) [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ─────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      Expected an image 1280px by 928px, received 1280px by 984px. 24170 pixels (ratio 0.02 of all image pixels) are different.
+
+      Snapshot: blog-view.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(blog-view.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - Expected an image 1280px by 928px, received 1280px by 984px. 24170 pixels (ratio 0.02 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - Expected an image 1280px by 928px, received 1280px by 984px. 24170 pixels (ratio 0.02 of all image pixels) are different.[22m
+
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Mask comments section as it might be dynamic
+    > 29 |             await expect(page).toHaveScreenshot('blog-view.png', {
+         |                                ^
+      30 |                 fullPage: true,
+      31 |                 mask: [page.locator('.comments-section')]
+      32 |             });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:32
+
+    attachment #1: blog-view (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/blog-view-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-chromium/blog-view-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-blog-view-snapshot-chromium/blog-view-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-chromium/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ───
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      256 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: admin-dashboard.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(admin-dashboard.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 256 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 256 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      39 |         await page.waitForLoadState('networkidle');
+      40 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 41 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |                            ^
+      42 |             fullPage: true,
+      43 |             mask: [page.locator('table tbody')]
+      44 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:41:28
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/admin-dashboard-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/admin-dashboard-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/error-context.md
+
+
+[1A[2K[7/18] [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[8/18] [firefox] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K[9/18] [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[10/18] [firefox] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[11/18] [firefox] › tests/visual.spec.ts:47:5 › Visual Regression Tests › home page aria snapshot
+[1A[2K[12/18] [firefox] › tests/visual.spec.ts:59:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  4) [firefox] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      112 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: admin-dashboard.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(admin-dashboard.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 112 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 112 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      39 |         await page.waitForLoadState('networkidle');
+      40 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 41 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |                            ^
+      42 |             fullPage: true,
+      43 |             mask: [page.locator('table tbody')]
+      44 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:41:28
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/admin-dashboard-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/admin-dashboard-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/error-context.md
+
+
+[1A[2K  5) [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ──────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      Expected an image 1280px by 904px, received 1280px by 720px. 16563 pixels (ratio 0.02 of all image pixels) are different.
+
+      Snapshot: blog-view.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(blog-view.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - Expected an image 1280px by 904px, received 1280px by 720px. 16563 pixels (ratio 0.02 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - Expected an image 1280px by 904px, received 1280px by 720px. 16563 pixels (ratio 0.02 of all image pixels) are different.[22m
+
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Mask comments section as it might be dynamic
+    > 29 |             await expect(page).toHaveScreenshot('blog-view.png', {
+         |                                ^
+      30 |                 fullPage: true,
+      31 |                 mask: [page.locator('.comments-section')]
+      32 |             });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:32
+
+    attachment #1: blog-view (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/blog-view-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-firefox/blog-view-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-blog-view-snapshot-firefox/blog-view-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-firefox/error-context.md
+
+
+[1A[2K[13/18] [webkit] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K[14/18] [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[15/18] [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K  6) [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ───────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      Expected an image 1280px by 1263px, received 1280px by 1143px. 58562 pixels (ratio 0.04 of all image pixels) are different.
+
+      Snapshot: home-page.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(home-page.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - Expected an image 1280px by 1263px, received 1280px by 1143px. 58562 pixels (ratio 0.04 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - Expected an image 1280px by 1263px, received 1280px by 1143px. 58562 pixels (ratio 0.04 of all image pixels) are different.[22m
+
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Mask dynamic content like dates or random IDs if necessary
+    > 10 |         await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
+         |                            ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:28
+
+    attachment #1: home-page (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/home-page-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-home-page-snapshot-firefox/home-page-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-home-page-snapshot-firefox/home-page-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-home-page-snapshot-firefox/error-context.md
+
+
+[1A[2K[16/18] [webkit] › tests/visual.spec.ts:47:5 › Visual Regression Tests › home page aria snapshot
+[1A[2K[17/18] [webkit] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[18/18] [webkit] › tests/visual.spec.ts:59:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  7) [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ────────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      Expected an image 1280px by 1202px, received 1280px by 1142px. 55071 pixels (ratio 0.04 of all image pixels) are different.
+
+      Snapshot: home-page.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(home-page.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - Expected an image 1280px by 1202px, received 1280px by 1142px. 55071 pixels (ratio 0.04 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - Expected an image 1280px by 1202px, received 1280px by 1142px. 55071 pixels (ratio 0.04 of all image pixels) are different.[22m
+
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Mask dynamic content like dates or random IDs if necessary
+    > 10 |         await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
+         |                            ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:28
+
+    attachment #1: home-page (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/home-page-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-home-page-snapshot-webkit/home-page-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-home-page-snapshot-webkit/home-page-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-home-page-snapshot-webkit/error-context.md
+
+
+[1A[2K  8) [webkit] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ─────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      132 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: admin-dashboard.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(admin-dashboard.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 132 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 132 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      39 |         await page.waitForLoadState('networkidle');
+      40 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 41 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |                            ^
+      42 |             fullPage: true,
+      43 |             mask: [page.locator('table tbody')]
+      44 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:41:28
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/admin-dashboard-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/admin-dashboard-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/error-context.md
+
+
+[1A[2K  9) [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ───────────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      Expected an image 1280px by 900px, received 1280px by 978px. 3568 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: blog-view.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(blog-view.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - Expected an image 1280px by 900px, received 1280px by 978px. 3568 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - Expected an image 1280px by 900px, received 1280px by 978px. 3568 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Mask comments section as it might be dynamic
+    > 29 |             await expect(page).toHaveScreenshot('blog-view.png', {
+         |                                ^
+      30 |                 fullPage: true,
+      31 |                 mask: [page.locator('.comments-section')]
+      32 |             });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:32
+
+    attachment #1: blog-view (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/blog-view-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-webkit/blog-view-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-blog-view-snapshot-webkit/blog-view-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-webkit/error-context.md
+
+
+[1A[2K  9 failed
+    [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ───────────
+    [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ──────────
+    [chromium] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ────
+    [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ────────────
+    [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ───────────
+    [firefox] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ─────
+    [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ─────────────
+    [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ────────────
+    [webkit] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ──────
+  9 passed (11.6s)
+
+[36m  Serving HTML report at http://localhost:61572. Press Ctrl+C to quit.[39m

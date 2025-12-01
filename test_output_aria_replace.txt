@@ -1,0 +1,528 @@
+
+Running 15 tests using 5 workers
+
+[1A[2K[1/15] [chromium] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K[2/15] [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[3/15] [chromium] › tests/visual.spec.ts:46:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[4/15] [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[5/15] [chromium] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[6/15] [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[7/15] [firefox] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K  1) [chromium] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot ───
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      26 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: admin-dashboard.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(admin-dashboard.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 26 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 26 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      36 |         await page.waitForLoadState('networkidle');
+      37 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 38 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |                            ^
+      39 |             fullPage: true,
+      40 |             mask: [page.locator('table tbody')]
+      41 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:38:28
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/admin-dashboard-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/admin-dashboard-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/error-context.md
+
+
+[1A[2K[8/15] [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K[9/15] [firefox] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K  2) [firefox] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot ────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      26 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: admin-dashboard.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(admin-dashboard.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 26 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 26 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      36 |         await page.waitForLoadState('networkidle');
+      37 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 38 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |                            ^
+      39 |             fullPage: true,
+      40 |             mask: [page.locator('table tbody')]
+      41 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:38:28
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/admin-dashboard-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/admin-dashboard-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot 
+
+    Error: A snapshot doesn't exist at tests/visual.spec.ts-snapshots/Visual-Regression-Tests-home-page-content-aria-snapshot-1.aria.yml, writing actual.
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Use Aria snapshot for dynamic content (blog list)
+    > 10 |         await expect(page.locator('body')).toMatchAriaSnapshot();
+         |         ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:9
+
+    Error Context: test-results/visual-Visual-Regression-T-76b86--page-content-aria-snapshot-chromium/error-context.md
+
+
+[1A[2K  4) [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot ────
+
+    Error: A snapshot doesn't exist at tests/visual.spec.ts-snapshots/Visual-Regression-Tests-blog-view-aria-snapshot-1.aria.yml, writing actual.
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Use Aria snapshot for blog view
+    > 29 |             await expect(page.locator('body')).toMatchAriaSnapshot();
+         |             ^
+      30 |         }
+      31 |     });
+      32 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:13
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-aria-snapshot-chromium/error-context.md
+
+
+[1A[2K[10/15] [firefox] › tests/visual.spec.ts:46:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[11/15] [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot
+[1A[2K[12/15] [webkit] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K[13/15] [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot
+[1A[2K  5) [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot 
+
+    Error: A snapshot doesn't exist at tests/visual.spec.ts-snapshots/Visual-Regression-Tests-home-page-content-aria-snapshot-1.aria.yml, writing actual.
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Use Aria snapshot for dynamic content (blog list)
+    > 10 |         await expect(page.locator('body')).toMatchAriaSnapshot();
+         |         ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:9
+
+    Error Context: test-results/visual-Visual-Regression-T-76b86--page-content-aria-snapshot-firefox/error-context.md
+
+
+[1A[2K[14/15] [webkit] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[15/15] [webkit] › tests/visual.spec.ts:46:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  6) [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot ─────
+
+    Error: A snapshot doesn't exist at tests/visual.spec.ts-snapshots/Visual-Regression-Tests-blog-view-aria-snapshot-1.aria.yml, writing actual.
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Use Aria snapshot for blog view
+    > 29 |             await expect(page.locator('body')).toMatchAriaSnapshot();
+         |             ^
+      30 |         }
+      31 |     });
+      32 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:13
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-aria-snapshot-firefox/error-context.md
+
+
+[1A[2K  7) [webkit] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot ─────
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      32 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: admin-dashboard.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(admin-dashboard.png)" with timeout 5000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 32 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 32 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      36 |         await page.waitForLoadState('networkidle');
+      37 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 38 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |                            ^
+      39 |             fullPage: true,
+      40 |             mask: [page.locator('table tbody')]
+      41 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:38:28
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/admin-dashboard-actual.png
+    Diff:     test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/admin-dashboard-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/error-context.md
+
+
+[1A[2K  8) [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoMatchAriaSnapshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('body')
+    Timeout: 5000ms
+    [32m- Expected  - 24[39m
+    [31m+ Received  + 24[39m
+
+    [33m@@ -9,77 +9,77 @@[39m
+    [2m  - heading "Welcome to Our Blog" [level=1][22m
+    [2m  - textbox "Search blogs..."[22m
+    [2m  - text: Category[22m
+    [2m  - combobox[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764585215175"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+ 7[27m 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025 11[27m 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764585205779"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 4 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 4 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764585189634"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 2 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 2 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764582938668"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+ \d+[27m 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025 34[27m 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764582937662"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 2 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 2 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764582936105"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 2 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 2 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764582698216"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 1 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 1 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764582698419"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 2 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 2 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - article:[22m
+    [32m-   - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=2][39m
+    [31m+   - heading [7m"[27mXSS Test Blog [7m1764582697352"[27m [level=2][39m
+    [2m    - text: Technology[22m
+    [2m    - paragraph: Testing XSS vulnerability in comments[22m
+    [32m-   - text: [7m/[27mDecember 1, [7m\d+[27m 2 0 1[7m/[27m[39m
+    [31m+   - text: December 1, [7m2025[27m 2 0 1[39m
+    [2m    - button "Read More"[22m
+    [2m  - navigation "pagination navigation":[22m
+    [2m    - list:[22m
+    [2m      - listitem:[22m
+    [2m        - button "Go to previous page" [disabled][22m
+    [2m      - listitem:[22m
+    [32m-       - button "page 1"[39m
+    [31m+       - button "page 1"[7m: "1"[27m[39m
+    [2m      - listitem:[22m
+    [32m-       - button "Go to page 2"[39m
+    [31m+       - button "Go to page 2"[7m: "2"[27m[39m
+    [2m      - listitem:[22m
+    [32m-       - button "Go to page 3"[39m
+    [31m+       - button "Go to page 3"[7m: "3"[27m[39m
+    [2m      - listitem:[22m
+    [32m-       - button "Go to page 4"[39m
+    [31m+       - button "Go to page 4"[7m: "4"[27m[39m
+    [2m      - listitem:[22m
+    [32m-       - button "Go to page 5"[39m
+    [31m+       - button "Go to page 5"[7m: "5"[27m[39m
+    [2m      - listitem: …[22m
+    [2m      - listitem:[22m
+    [32m-       - button [7m/[27mGo to page [7m\d+/[27m[39m
+    [31m+       - button [7m"[27mGo to page [7m11": "11"[27m[39m
+    [2m      - listitem:[22m
+    [2m        - button "Go to next page"[22m
+
+    Call log:
+    [2m  - Expect "toMatchAriaSnapshot" with timeout 5000ms[22m
+    [2m  - waiting for locator('body')[22m
+    [2m    9 × locator resolved to <body>…</body>[22m
+    [2m      - unexpected value "- banner:[22m
+    [2m  - link "Blog App":[22m
+    [2m    - /url: /[22m
+    [2m  - link "Home":[22m
+    [2m    - /url: /[22m
+    [2m  - link "Admin Login":[22m
+    [2m    - /url: /login[22m
+    [2m  - button "toggle theme"[22m
+    [2m- heading "Welcome to Our Blog" [level=1][22m
+    [2m- textbox "Search blogs..."[22m
+    [2m- text: Category[22m
+    [2m- combobox[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764585215175" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 11 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764585205779" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 4 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764585189634" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 2 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764582938668" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 34 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764582937662" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 2 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764582936105" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 2 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764582698216" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 1 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764582698419" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 2 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- article:[22m
+    [2m  - heading "XSS Test Blog 1764582697352" [level=2][22m
+    [2m  - text: Technology[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - text: December 1, 2025 2 0 1[22m
+    [2m  - button "Read More"[22m
+    [2m- navigation "pagination navigation":[22m
+    [2m  - list:[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to previous page" [disabled][22m
+    [2m    - listitem:[22m
+    [2m      - button "page 1": "1"[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to page 2": "2"[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to page 3": "3"[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to page 4": "4"[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to page 5": "5"[22m
+    [2m    - listitem: …[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to page 11": "11"[22m
+    [2m    - listitem:[22m
+    [2m      - button "Go to next page""[22m
+
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Use Aria snapshot for dynamic content (blog list)
+    > 10 |         await expect(page.locator('body')).toMatchAriaSnapshot();
+         |                                            ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:44
+
+    Error Context: test-results/visual-Visual-Regression-T-76b86--page-content-aria-snapshot-webkit/error-context.md
+
+
+[1A[2K  9) [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot ──────
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoMatchAriaSnapshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator: locator('body')
+    Timeout: 5000ms
+    [32m- Expected  - 5[39m
+    [31m+ Received  + 5[39m
+
+    [33m@@ -4,26 +4,26 @@[39m
+    [2m    - link "Home":[22m
+    [2m      - /url: /[22m
+    [2m    - link "Admin Login":[22m
+    [2m      - /url: /login[22m
+    [2m    - button "toggle theme"[22m
+    [32m- - heading [7m/[27mXSS Test Blog [7m\d+/[27m [level=1][39m
+    [31m+ - heading [7m"[27mXSS Test Blog [7m1764585215175"[27m [level=1][39m
+    [2m  - text: Live Technology[22m
+    [32m- - paragraph: [7m8[27m views[39m
+    [31m+ - paragraph: [7m11[27m views[39m
+    [2m  - button "like this post"[22m
+    [2m  - paragraph: 0 likes[22m
+    [32m- - text: [7m/[27mPublished on December 1, [7m\d+ at \d+:\d+[27m AM[7m/[27m[39m
+    [31m+ - text: Published on December 1, [7m2025 at 10:33[27m AM[39m
+    [2m  - separator[22m
+    [2m  - paragraph: Testing XSS vulnerability in comments[22m
+    [2m  - separator[22m
+    [2m  - heading "Comments (1)" [level=5][22m
+    [2m  - text: Your Name[22m
+    [2m  - textbox "Your Name"[22m
+    [2m  - paragraph: Enter your name to post a comment[22m
+    [2m  - text: Your Comment[22m
+    [2m  - textbox "Your Comment"[22m
+    [32m- - paragraph: [7m/0\/\d+[27m characters[7m/[27m[39m
+    [31m+ - paragraph: [7m0/2000[27m characters[39m
+    [2m  - button "Post Comment"[22m
+    [2m  - list:[22m
+    [2m    - listitem:[22m
+    [2m      - heading "Hacker" [level=6][22m
+    [32m-     - paragraph: [7m/[27mThis is a test comment December 1, [7m\d+ at \d+:\d+[27m AM[7m/[27m[39m
+    [31m+     - paragraph: This is a test comment December 1, [7m2025 at 10:33[27m AM[39m
+
+    Call log:
+    [2m  - Expect "toMatchAriaSnapshot" with timeout 5000ms[22m
+    [2m  - waiting for locator('body')[22m
+    [2m    9 × locator resolved to <body>…</body>[22m
+    [2m      - unexpected value "- banner:[22m
+    [2m  - link "Blog App":[22m
+    [2m    - /url: /[22m
+    [2m  - link "Home":[22m
+    [2m    - /url: /[22m
+    [2m  - link "Admin Login":[22m
+    [2m    - /url: /login[22m
+    [2m  - button "toggle theme"[22m
+    [2m- heading "XSS Test Blog 1764585215175" [level=1][22m
+    [2m- text: Live Technology[22m
+    [2m- paragraph: 11 views[22m
+    [2m- button "like this post"[22m
+    [2m- paragraph: 0 likes[22m
+    [2m- text: Published on December 1, 2025 at 10:33 AM[22m
+    [2m- separator[22m
+    [2m- paragraph: Testing XSS vulnerability in comments[22m
+    [2m- separator[22m
+    [2m- heading "Comments (1)" [level=5][22m
+    [2m- text: Your Name[22m
+    [2m- textbox "Your Name"[22m
+    [2m- paragraph: Enter your name to post a comment[22m
+    [2m- text: Your Comment[22m
+    [2m- textbox "Your Comment"[22m
+    [2m- paragraph: 0/2000 characters[22m
+    [2m- button "Post Comment"[22m
+    [2m- list:[22m
+    [2m  - listitem:[22m
+    [2m    - heading "Hacker" [level=6][22m
+    [2m    - paragraph: This is a test comment December 1, 2025 at 10:33 AM"[22m
+
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Use Aria snapshot for blog view
+    > 29 |             await expect(page.locator('body')).toMatchAriaSnapshot();
+         |                                                ^
+      30 |         }
+      31 |     });
+      32 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:48
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-aria-snapshot-webkit/error-context.md
+
+
+[1A[2K  9 failed
+    [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot 
+    [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot ─────
+    [chromium] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot ────
+    [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot 
+    [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot ──────
+    [firefox] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot ─────
+    [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page content aria snapshot 
+    [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view aria snapshot ───────
+    [webkit] › tests/visual.spec.ts:33:5 › Visual Regression Tests › admin dashboard snapshot ──────
+  6 passed (14.2s)
+
+[36m  Serving HTML report at http://localhost:64121. Press Ctrl+C to quit.[39m

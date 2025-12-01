@@ -1,0 +1,75 @@
+
+Running 12 tests using 5 workers
+
+[1A[2K[1/12] [chromium] › tests/security.spec.ts:67:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[2/12] [chromium] › tests/security.spec.ts:101:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[3/12] [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[4/12] [chromium] › tests/security.spec.ts:80:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[5/12] [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[6/12] [firefox] › tests/security.spec.ts:67:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[7/12] [firefox] › tests/security.spec.ts:80:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[8/12] [firefox] › tests/security.spec.ts:101:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[9/12] [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[10/12] [webkit] › tests/security.spec.ts:67:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[11/12] [webkit] › tests/security.spec.ts:80:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[12/12] [webkit] › tests/security.spec.ts:101:5 › Security Tests › should prevent unauthorized API access
+[1A[2K  1) [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+
+    Error: locator.count: Unexpected token "XSS" while parsing css selector "script:has-text("alert("XSS")")". Did you mean to CSS.escape it?
+
+      61 |
+      62 |         // Ensure it's not executed (no script tag with that content)
+    > 63 |         const scriptCount = await page.locator(`script:has-text("alert(\"XSS\")")`).count();
+         |                                                                                     ^
+      64 |         expect(scriptCount).toBe(0);
+      65 |     });
+      66 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:63:85
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-firefox/error-context.md
+
+
+[1A[2K  2) [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+
+    Error: locator.count: Unexpected token "XSS" while parsing css selector "script:has-text("alert("XSS")")". Did you mean to CSS.escape it?
+
+      61 |
+      62 |         // Ensure it's not executed (no script tag with that content)
+    > 63 |         const scriptCount = await page.locator(`script:has-text("alert(\"XSS\")")`).count();
+         |                                                                                     ^
+      64 |         expect(scriptCount).toBe(0);
+      65 |     });
+      66 |
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:63:85
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-webkit/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('.blog-post-card').filter({ hasText: 'XSS Test Blog 1764582465302' }).getByRole('button', { name: /read more/i })[22m
+
+
+      22 |         // Find the blog post card and click Read More
+      23 |         const blogCard = page.locator('.blog-post-card').filter({ hasText: blogData.title });
+    > 24 |         await blogCard.getByRole('button', { name: /read more/i }).click();
+         |                                                                    ^
+      25 |
+      26 |         // Wait for blog post to load
+      27 |         await expect(page.getByRole('heading', { level: 1, name: blogData.title })).toBeVisible();
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:24:68
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-chromium/error-context.md
+
+
+[1A[2K  3 failed
+    [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+    [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+    [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ───
+  9 passed (30.8s)
+
+[36m  Serving HTML report at http://localhost:59057. Press Ctrl+C to quit.[39m

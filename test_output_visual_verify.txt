@@ -1,0 +1,27 @@
+
+Running 18 tests using 5 workers
+
+[1A[2K[1/18] [chromium] › tests/visual.spec.ts:47:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[2/18] [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[3/18] [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › login page snapshot
+[1A[2K[4/18] [chromium] › tests/visual.spec.ts:25:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[5/18] [chromium] › tests/visual.spec.ts:58:5 › Visual Regression Tests › home page aria snapshot
+[1A[2K[6/18] [chromium] › tests/visual.spec.ts:70:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[7/18] [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[8/18] [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › login page snapshot
+[1A[2K[9/18] [firefox] › tests/visual.spec.ts:25:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[10/18] [firefox] › tests/visual.spec.ts:47:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[11/18] [firefox] › tests/visual.spec.ts:70:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K[12/18] [firefox] › tests/visual.spec.ts:58:5 › Visual Regression Tests › home page aria snapshot
+[1A[2K[13/18] [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[14/18] [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › login page snapshot
+[1A[2K[15/18] [webkit] › tests/visual.spec.ts:25:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[16/18] [webkit] › tests/visual.spec.ts:47:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K[17/18] [webkit] › tests/visual.spec.ts:58:5 › Visual Regression Tests › home page aria snapshot
+[1A[2K[18/18] [webkit] › tests/visual.spec.ts:70:5 › Visual Regression Tests › login page aria snapshot
+[1A[2K  18 passed (9.3s)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m

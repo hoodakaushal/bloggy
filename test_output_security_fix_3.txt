@@ -1,0 +1,103 @@
+
+Running 12 tests using 5 workers
+
+[1A[2K[1/12] [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[2/12] [chromium] › tests/security.spec.ts:97:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[3/12] [chromium] › tests/security.spec.ts:76:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[4/12] [chromium] › tests/security.spec.ts:63:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[5/12] [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[6/12] [firefox] › tests/security.spec.ts:63:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[7/12] [firefox] › tests/security.spec.ts:76:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[8/12] [firefox] › tests/security.spec.ts:97:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[9/12] [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[10/12] [webkit] › tests/security.spec.ts:63:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[11/12] [webkit] › tests/security.spec.ts:97:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[12/12] [webkit] › tests/security.spec.ts:76:5 › Security Tests › should prevent SQL injection in login
+[1A[2K  1) [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel(/Your Comment/i)
+    Expected: visible
+    Error: strict mode violation: getByLabel(/Your Comment/i) resolved to 2 elements:
+        1) <div aria-label="Your Comment" class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1j5gcdd-MuiFormControl-root-MuiTextField-root">…</div> aka getByLabel('Your Comment', { exact: true })
+        2) <textarea rows="4" id=":r9:" required="" aria-invalid="false" aria-describedby=":r9:-helper-text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"></textarea> aka getByRole('textbox', { name: 'Your Comment' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByLabel(/Your Comment/i)[22m
+
+
+      36 |         // Fill in comment
+      37 |         const commentInput = page.getByLabel(/Your Comment/i);
+    > 38 |         await expect(commentInput).toBeVisible();
+         |                                    ^
+      39 |         await commentInput.fill(`${safeComment} ${xssPayload}`);
+      40 |
+      41 |         // Submit
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:38:36
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-chromium/error-context.md
+
+
+[1A[2K  2) [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel(/Your Comment/i)
+    Expected: visible
+    Error: strict mode violation: getByLabel(/Your Comment/i) resolved to 2 elements:
+        1) <div aria-label="Your Comment" class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1j5gcdd-MuiFormControl-root-MuiTextField-root">…</div> aka getByLabel('Your Comment', { exact: true })
+        2) <textarea rows="4" id=":r9:" required="" aria-invalid="false" aria-describedby=":r9:-helper-text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"></textarea> aka getByRole('textbox', { name: 'Your Comment' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByLabel(/Your Comment/i)[22m
+
+
+      36 |         // Fill in comment
+      37 |         const commentInput = page.getByLabel(/Your Comment/i);
+    > 38 |         await expect(commentInput).toBeVisible();
+         |                                    ^
+      39 |         await commentInput.fill(`${safeComment} ${xssPayload}`);
+      40 |
+      41 |         // Submit
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:38:36
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-firefox/error-context.md
+
+
+[1A[2K  3) [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel(/Your Comment/i)
+    Expected: visible
+    Error: strict mode violation: getByLabel(/Your Comment/i) resolved to 2 elements:
+        1) <div aria-label="Your Comment" class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-1j5gcdd-MuiFormControl-root-MuiTextField-root">…</div> aka getByLabel('Your Comment', { exact: true })
+        2) <textarea rows="4" id=":r9:" required="" aria-invalid="false" aria-describedby=":r9:-helper-text" class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputMultiline css-1sqnrkk-MuiInputBase-input-MuiOutlinedInput-input"></textarea> aka getByRole('textbox', { name: 'Your Comment' })
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByLabel(/Your Comment/i)[22m
+
+
+      36 |         // Fill in comment
+      37 |         const commentInput = page.getByLabel(/Your Comment/i);
+    > 38 |         await expect(commentInput).toBeVisible();
+         |                                    ^
+      39 |         await commentInput.fill(`${safeComment} ${xssPayload}`);
+      40 |
+      41 |         // Submit
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:38:36
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-webkit/error-context.md
+
+
+[1A[2K  3 failed
+    [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+    [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+    [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ───
+  9 passed (10.3s)
+
+[36m  Serving HTML report at http://localhost:58642. Press Ctrl+C to quit.[39m
