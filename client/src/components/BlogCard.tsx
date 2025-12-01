@@ -43,6 +43,8 @@ export default function BlogCard({ blog }: BlogCardProps) {
         opacity: isRead ? 0.7 : 1,
         position: 'relative'
       }}
+      component="article"
+      className="blog-post-card"
     >
       {isRead && (
         <Chip

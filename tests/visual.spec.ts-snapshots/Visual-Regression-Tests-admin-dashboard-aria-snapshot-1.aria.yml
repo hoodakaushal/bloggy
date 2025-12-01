@@ -1,0 +1,162 @@
+- banner:
+  - link "Blog App":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Dashboard":
+    - /url: /admin
+  - button "Logout"
+  - button "toggle theme"
+- heading "Blog Management" [level=1]
+- button "Create New Post"
+- table:
+  - rowgroup:
+    - row "Title Category Status Views Likes Comments Created Actions":
+      - columnheader "Title"
+      - columnheader "Category"
+      - columnheader "Status"
+      - columnheader "Views"
+      - columnheader "Likes"
+      - columnheader "Comments"
+      - columnheader "Created"
+      - columnheader "Actions"
+  - rowgroup:
+    - row /XSS Test Blog \d+ Technology published \d+ 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell /\d+/
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 4 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "4"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 2 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "2"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published \d+ 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell /\d+/
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 2 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "2"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 2 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "2"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 1 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "1"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 2 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "2"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 2 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "2"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+    - row /XSS Test Blog \d+ Technology published 1 0 1 Dec 1, \d+/:
+      - cell /XSS Test Blog \d+/
+      - cell "Technology"
+      - cell "published"
+      - cell "1"
+      - cell "0"
+      - cell "1"
+      - cell /Dec 1, \d+/
+      - cell:
+        - button "View"
+        - button "Edit"
+        - button "Delete"
+- navigation "pagination navigation":
+  - list:
+    - listitem:
+      - button "Go to previous page" [disabled]
+    - listitem:
+      - button "page 1"
+    - listitem:
+      - button "Go to page 2"
+    - listitem:
+      - button "Go to page 3"
+    - listitem:
+      - button "Go to page 4"
+    - listitem:
+      - button "Go to page 5"
+    - listitem: …
+    - listitem:
+      - button /Go to page \d+/
+    - listitem:
+      - button "Go to next page"

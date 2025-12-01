@@ -1,0 +1,29 @@
+- banner:
+  - link "Blog App":
+    - /url: /
+  - link "Home":
+    - /url: /
+  - link "Admin Login":
+    - /url: /login
+  - button "toggle theme"
+- heading /XSS Test Blog \d+/ [level=1]
+- text: Live Technology
+- paragraph: /\d+ views/
+- button "like this post"
+- paragraph: 0 likes
+- text: /Published on December 1, \d+ at \d+:\d+ AM/
+- separator
+- paragraph: Testing XSS vulnerability in comments
+- separator
+- heading "Comments (1)" [level=5]
+- text: Your Name
+- textbox "Your Name"
+- paragraph: Enter your name to post a comment
+- text: Your Comment
+- textbox "Your Comment"
+- paragraph: /0\/\d+ characters/
+- button "Post Comment"
+- list:
+  - listitem:
+    - heading "Hacker" [level=6]
+    - paragraph: /This is a test comment December 1, \d+ at \d+:\d+ AM/

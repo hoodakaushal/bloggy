@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
   Container,
   Grid,
@@ -19,10 +20,14 @@ import { blogApi } from '../services/api';
 import type { BlogListItem, PaginatedResponse } from 'shared';
 
 export default function Home() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [blogs, setBlogs] = useState<BlogListItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [page, setPage] = useState(1);
+
+  const pageParam = searchParams.get('page');
+  const initialPage = pageParam ? parseInt(pageParam, 10) : 1;
+  const [page, setPage] = useState(initialPage);
   const [totalPages, setTotalPages] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [category, setCategory] = useState('');
@@ -85,6 +90,10 @@ export default function Home() {
 
   const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
+    const params: Record<string, string> = { page: value.toString() };
+    if (searchQuery) params.search = searchQuery;
+    if (category) params.category = category;
+    setSearchParams(params);
     window.scrollTo(0, 0);
   };
 

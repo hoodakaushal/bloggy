@@ -1,0 +1,65 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Blog App" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "Admin Login" [ref=e8] [cursor=pointer]:
+          - /url: /login
+          - text: Admin Login
+        - button "toggle theme" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - heading "XSS Test Blog 1764587626911" [level=1] [ref=e14]
+      - generic [ref=e15]:
+        - img [ref=e16]
+        - generic [ref=e18]: Live
+    - generic [ref=e21]: Technology
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - img [ref=e24]
+        - paragraph [ref=e26]: 1 views
+      - generic [ref=e27]:
+        - button "like this post" [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+        - paragraph [ref=e31]: 0 likes
+    - generic [ref=e32]: Published on December 1, 2025 at 11:13 AM
+    - separator [ref=e33]
+    - paragraph [ref=e35]: Testing XSS vulnerability in comments
+    - separator [ref=e36]
+    - heading "Comments (1)" [level=5] [ref=e37]
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic:
+          - text: Your Name
+          - generic: "*"
+        - generic [ref=e41]:
+          - textbox "Your Name" [ref=e42]
+          - group:
+            - generic: Your Name *
+        - paragraph [ref=e43]: Enter your name to post a comment
+      - generic "Your Comment" [ref=e44]:
+        - generic:
+          - text: Your Comment
+          - generic: "*"
+        - generic [ref=e45]:
+          - textbox "Your Comment" [ref=e46]
+          - group:
+            - generic: Your Comment *
+        - paragraph [ref=e47]: 0/2000 characters
+      - button "Post Comment" [ref=e48] [cursor=pointer]: Post Comment
+    - list [ref=e49]:
+      - listitem [ref=e50]:
+        - generic [ref=e51]:
+          - heading "Hacker" [level=6] [ref=e54]
+          - paragraph [ref=e55]:
+            - text: This is a test comment
+            - text: December 1, 2025 at 11:13 AM
+```

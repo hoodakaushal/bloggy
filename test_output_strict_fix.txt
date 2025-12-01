@@ -1,0 +1,1198 @@
+
+Running 69 tests using 5 workers
+
+[1A[2K[1/69] [chromium] › tests/blog-management.spec.ts:133:5 › Blog Management › should handle draft and published status
+[1A[2K[2/69] [chromium] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[3/69] [chromium] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[4/69] [chromium] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+[1A[2K[5/69] [chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== CLICKING READ MORE ===
+
+[1A[2K[chromium] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== BLOG POST STRUCTURE ===
+
+[1A[2K
+Blog 1: Test Blog Post 1764574050174
+
+[1A[2K  Parent: <div> class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+
+[1A[2K  Grandparent: <article> class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root blog-post-card css-11ok493-MuiPaper-root-MuiCard-root"
+
+[1A[2K
+Blog 2: Test Blog Post 1764574023519
+
+[1A[2K  Parent: <div> class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+
+[1A[2K  Grandparent: <article> class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root blog-post-card css-11ok493-MuiPaper-root-MuiCard-root"
+
+[1A[2K
+=== NAVIGATING TO LOGIN ===
+
+[1A[2K
+=== LOGIN FORM STRUCTURE ===
+
+[1A[2KUsername input: name="null", placeholder="null", type="text"
+
+[1A[2KPassword input: name="null", placeholder="null"
+
+[1A[2KSubmit button text: "Login"
+
+[1A[2K
+=== NAVIGATING TO BLOG POST ===
+
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Current URL: http://localhost:5173/blog/18
+
+[1A[2K
+=== BLOG POST PAGE ===
+
+[1A[2KH1: Test Blog Post 1764574050174
+
+[1A[2K
+Buttons on page:
+
+[1A[2K  - "Post Comment"
+
+[1A[2K
+Textareas: 2, Inputs: 1
+
+[1A[2KForms: 1
+
+[1A[2K
+=== LOGGING IN AS ADMIN ===
+
+[1A[2K[chromium] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== BLOG POST PAGE STRUCTURE ===
+
+[1A[2KTotal buttons on post page: 14
+
+[1A[2K  Button: "" aria-label="toggle theme"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "" aria-label="Go to previous page"
+
+[1A[2K  Button: "1" aria-label="page 1"
+
+[1A[2K  Button: "2" aria-label="Go to page 2"
+
+[1A[2K  Button: "" aria-label="Go to next page"
+
+[1A[2K
+Textareas found: 0
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[6/69] [chromium] › tests/inspect.spec.ts:3:1 › inspect UI elements
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+After login URL: http://localhost:5173/admin
+
+[1A[2K
+=== NAVIGATING TO DASHBOARD ===
+
+[1A[2K
+=== NAVIGATING TO CREATE POST ===
+
+[1A[2K[chromium] › tests/inspect.spec.ts:3:1 › inspect UI elements
+=== PAGE LOADED ===
+
+[1A[2K
+=== BLOG POST SELECTORS ===
+
+[1A[2KArticles found: 9
+
+[1A[2KDivs with 'post' in class: 0
+
+[1A[2KDivs with 'blog' in class: 0
+
+[1A[2KDivs with 'card' in class: 0
+
+[1A[2K
+=== BLOG TITLES ===
+
+[1A[2KH1 tags: 1, H2 tags: 9, H3 tags: 0
+
+[1A[2K[7/69] [chromium] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+[1A[2KFirst H2 text: Test Blog Post 1764574205878
+
+[1A[2K
+=== SEARCH INPUT ===
+
+[1A[2KSearch by placeholder: 1
+
+[1A[2KInput type=search: 0
+
+[1A[2KInput type=text: 1
+
+[1A[2K
+=== THEME TOGGLE ===
+
+[1A[2KTheme buttons: 1
+
+[1A[2KTotal buttons on page: 14
+
+[1A[2K
+=== LOGIN BUTTON ===
+
+[1A[2KLogin buttons: 0
+
+[1A[2KLogin links: 1
+
+[1A[2K
+=== PAGINATION ===
+
+[1A[2KNext buttons: 1
+
+[1A[2KPrevious buttons: 1
+
+[1A[2K[8/69] [chromium] › tests/pagination.spec.ts:11:5 › Pagination › should navigate through multiple pages using next button
+[1A[2K[chromium] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Create post URL: http://localhost:5173/admin/blog/new
+
+[1A[2K
+=== INSPECTING CATEGORY SELECT ===
+
+[1A[2KCategory Label count: 0
+
+[1A[2KCategory Select (.MuiSelect-select) count: 2
+
+[1A[2KCategory Combobox count: 0
+
+[1A[2KCategory Select HTML: <div tabindex="0" role="combobox" aria-controls=":rd:" aria-expanded="false" aria-haspopup="listbox" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-10l5tdt-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"><span class="notranslate">​</span></div>
+
+[1A[2K
+=== INSPECTING PUBLISH BUTTON ===
+
+[1A[2KPublish Button (Role) count: 2
+
+[1A[2KPublish Button (XPath) count: 1
+
+[1A[2KPublish Button (Role) HTML: <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ueukts-MuiButtonBase-root-MuiToggleButton-root" tabindex="0" type="button" value="published" aria-pressed="false" aria-label="published">Published<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+
+[1A[2KPublish Button (Role) Disabled: false
+
+[1A[2KPublish Button (XPath) HTML: <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="button" disabled=""><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PublishIcon"><path d="M5 4v2h14V4zm0 10h4v6h6v-6h4l-7-7z"></path></svg></span>Publish Now</button>
+
+[1A[2KPublish Button (XPath) Disabled: true
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[9/69] [chromium] › tests/pagination.spec.ts:72:5 › Pagination › should navigate using previous button
+[1A[2K[chromium] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+
+=== LOGIN PAGE ===
+
+[1A[2KLabels found: 2
+
+[1A[2K  Label: "Username *"
+
+[1A[2K  Label: "Password *"
+
+[1A[2K
+Username by label: 1, Password by label: 1
+
+[1A[2K[chromium] › tests/pagination.spec.ts:11:5 › Pagination › should navigate through multiple pages using next button
+Successfully navigated to page 2
+
+[1A[2K[10/69] [chromium] › tests/pagination.spec.ts:109:5 › Pagination › should persist page state in URL
+[1A[2K[chromium] › tests/pagination.spec.ts:72:5 › Pagination › should navigate using previous button
+Successfully navigated back to page 1
+
+[1A[2K[11/69] [chromium] › tests/pagination.spec.ts:135:5 › Pagination › should allow direct navigation to specific page via URL
+[1A[2K[chromium] › tests/pagination.spec.ts:109:5 › Pagination › should persist page state in URL
+Page state persisted in URL after refresh
+
+[1A[2K[12/69] [chromium] › tests/pagination.spec.ts:161:5 › Pagination › should display page numbers correctly
+[1A[2K[chromium] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+
+After login URL: http://localhost:5173/admin
+
+[1A[2KLogout button: 1, Logout link: 0
+
+[1A[2K"Admin" text found: 0
+
+[1A[2K
+Links on page:
+
+[1A[2K  - "Blog App"
+
+[1A[2K  - "Home"
+
+[1A[2K  - "Dashboard"
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[13/69] [chromium] › tests/pagination.spec.ts:192:5 › Pagination › should disable previous button on first page
+[1A[2K[chromium] › tests/pagination.spec.ts:161:5 › Pagination › should display page numbers correctly
+No page number indicators found
+
+[1A[2K[14/69] [chromium] › tests/pagination.spec.ts:218:5 › Pagination › should disable next button on last page
+[1A[2K[chromium] › tests/pagination.spec.ts:135:5 › Pagination › should allow direct navigation to specific page via URL
+Successfully navigated directly to page 3 via URL
+
+[1A[2K[15/69] [chromium] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination
+[1A[2K[chromium] › tests/pagination.spec.ts:192:5 › Pagination › should disable previous button on first page
+Previous button is correctly disabled on first page
+
+[1A[2K[16/69] [chromium] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+[1A[2K[chromium] › tests/pagination.spec.ts:218:5 › Pagination › should disable next button on last page
+Successfully reached last page (page 2)
+
+[1A[2K[17/69] [chromium] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+[1A[2K[chromium] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination
+Not enough search results for pagination
+
+[1A[2K[18/69] [chromium] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+[1A[2K[chromium] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+Search for "Test" returned 9 results
+
+[1A[2K[19/69] [chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+[1A[2K[chromium] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+Found 9 blog posts on the page
+
+[1A[2K[20/69] [chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+[1A[2K[chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Initial theme: null
+
+[1A[2K[chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Initial read posts: 0
+
+[1A[2K[chromium] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+Successfully viewed blog post: Test Blog Post 1764574205878
+
+[1A[2K[21/69] [chromium] › tests/public-viewing.spec.ts:229:5 › Public Blog Viewing › should allow anonymous users to like posts
+[1A[2K[chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+New theme after toggle: dark
+
+[1A[2KTheme persisted after refresh: dark
+
+[1A[2K[chromium] › tests/public-viewing.spec.ts:229:5 › Public Blog Viewing › should allow anonymous users to like posts
+Like button not found, skipping like test
+
+[1A[2K[22/69] [chromium] › tests/public-viewing.spec.ts:258:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+[1A[2K[chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Theme persisted in new page: dark
+
+[1A[2K[23/69] [chromium] › tests/seed.spec.ts:4:3 › Test group › seed
+[1A[2K[chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Read posts after viewing: 0
+
+[1A[2K  1) [chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+      198 |         const readPostsAfterView = await getReadPosts(page);
+      199 |         console.log(`Read posts after viewing: ${readPostsAfterView.length}`);
+    > 200 |         expect(readPostsAfterView.length).toBeGreaterThan(initialReadPosts.length);
+          |                                           ^
+      201 |
+      202 |         // Take screenshot showing read indicator
+      203 |         await page.screenshot({ path: 'test-results/blog-list-with-read.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/public-viewing.spec.ts:200:43
+
+    Error Context: test-results/public-viewing-Public-Blog-0572d-gs-visually-across-sessions-chromium/error-context.md
+
+
+[1A[2K[24/69] [firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+[1A[2K[25/69] [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[chromium] › tests/public-viewing.spec.ts:258:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+Comment input not found, skipping comment test
+
+[1A[2K[26/69] [firefox] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== CLICKING READ MORE ===
+
+[1A[2K  2) [chromium] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: /delete/i }).or(getByRole('menuitem', { name: /delete/i })).first()[22m
+
+
+      104 |
+      105 |         // Click delete button
+    > 106 |         await deleteButton.first().click();
+          |                                    ^
+      107 |
+      108 |         // Wait for confirmation dialog
+      109 |         await page.waitForTimeout(500);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:106:36
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-chromium/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('xpath=(//button[contains(text(),"Publish")])[2]')[22m
+    [2m    - locator resolved to <button disabled tabindex="-1" type="button" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root">…</button>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    48 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is not enabled[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m  - element was detached from the DOM, retrying[22m
+
+
+      49 |         // Publish the post
+      50 |         const publishButton = page.locator('(//button[contains(text(),"Publish")])[2]');
+    > 51 |         await publishButton.click();
+         |                             ^
+      52 |
+      53 |         // Wait for success indication (could be redirect, toast, or message)
+      54 |         await page.waitForTimeout(2000);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:51:29
+
+    Error Context: test-results/blog-management-Blog-Manag-03cf6-ew-blog-post-and-publish-it-chromium/error-context.md
+
+
+[1A[2KCurrent URL: http://localhost:5173/blog/19
+
+[1A[2K
+=== BLOG POST PAGE ===
+
+[1A[2KH1: Test Blog Post 1764574205878
+
+[1A[2K[27/69] [firefox] › tests/blog-management.spec.ts:133:5 › Blog Management › should handle draft and published status
+[1A[2K[28/69] [firefox] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+[1A[2K
+Buttons on page:
+
+[1A[2K  - "Post Comment"
+
+[1A[2K
+Textareas: 2, Inputs: 1
+
+[1A[2KForms: 1
+
+[1A[2K
+=== LOGGING IN AS ADMIN ===
+
+[1A[2K[firefox] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== BLOG POST STRUCTURE ===
+
+[1A[2K
+Blog 1: Test Blog Post 1764574205878
+
+[1A[2K  Parent: <div> class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+
+[1A[2K  Grandparent: <article> class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root blog-post-card css-11ok493-MuiPaper-root-MuiCard-root"
+
+[1A[2K
+Blog 2: Test Blog Post 1764574050174
+
+[1A[2K  Parent: <div> class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+
+[1A[2K  Grandparent: <article> class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root blog-post-card css-11ok493-MuiPaper-root-MuiCard-root"
+
+[1A[2K
+=== NAVIGATING TO LOGIN ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+After login URL: http://localhost:5173/admin
+
+[1A[2K
+=== NAVIGATING TO DASHBOARD ===
+
+[1A[2K[firefox] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== LOGIN FORM STRUCTURE ===
+
+[1A[2KUsername input: name="null", placeholder="null", type="text"
+
+[1A[2KPassword input: name="null", placeholder="null"
+
+[1A[2KSubmit button text: "Login"
+
+[1A[2K
+=== NAVIGATING TO BLOG POST ===
+
+[1A[2K[firefox] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== NAVIGATING TO CREATE POST ===
+
+[1A[2KCreate post URL: http://localhost:5173/admin/blog/new
+
+[1A[2K
+=== INSPECTING CATEGORY SELECT ===
+
+[1A[2KCategory Label count: 0
+
+[1A[2KCategory Select (.MuiSelect-select) count: 2
+
+[1A[2KCategory Combobox count: 0
+
+[1A[2KCategory Select HTML: <div tabindex="0" role="combobox" aria-controls=":rd:" aria-expanded="false" aria-haspopup="listbox" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-10l5tdt-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"><span class="notranslate">​</span></div>
+
+[1A[2K
+=== INSPECTING PUBLISH BUTTON ===
+
+[1A[2KPublish Button (Role) count: 2
+
+[1A[2KPublish Button (XPath) count: 1
+
+[1A[2KPublish Button (Role) HTML: <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ueukts-MuiButtonBase-root-MuiToggleButton-root" tabindex="0" type="button" value="published" aria-pressed="false" aria-label="published">Published<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+
+[1A[2KPublish Button (Role) Disabled: false
+
+[1A[2KPublish Button (XPath) HTML: <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="button" disabled=""><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PublishIcon"><path d="M5 4v2h14V4zm0 10h4v6h6v-6h4l-7-7z"></path></svg></span>Publish Now</button>
+
+[1A[2KPublish Button (XPath) Disabled: true
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[29/69] [firefox] › tests/inspect.spec.ts:3:1 › inspect UI elements
+[1A[2K[firefox] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== BLOG POST PAGE STRUCTURE ===
+
+[1A[2KTotal buttons on post page: 15
+
+[1A[2K  Button: "" aria-label="toggle theme"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "" aria-label="Go to previous page"
+
+[1A[2K  Button: "1" aria-label="page 1"
+
+[1A[2K  Button: "2" aria-label="Go to page 2"
+
+[1A[2K  Button: "3" aria-label="Go to page 3"
+
+[1A[2K  Button: "" aria-label="Go to next page"
+
+[1A[2K
+Textareas found: 0
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[30/69] [firefox] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+[1A[2K[firefox] › tests/inspect.spec.ts:3:1 › inspect UI elements
+=== PAGE LOADED ===
+
+[1A[2K
+=== BLOG POST SELECTORS ===
+
+[1A[2KArticles found: 9
+
+[1A[2KDivs with 'post' in class: 0
+
+[1A[2KDivs with 'blog' in class: 0
+
+[1A[2KDivs with 'card' in class: 0
+
+[1A[2K
+=== BLOG TITLES ===
+
+[1A[2KH1 tags: 1, H2 tags: 9, H3 tags: 0
+
+[1A[2KFirst H2 text: Test Blog Post 1764574232136
+
+[1A[2K
+=== SEARCH INPUT ===
+
+[1A[2KSearch by placeholder: 1
+
+[1A[2KInput type=search: 0
+
+[1A[2KInput type=text: 1
+
+[1A[2K
+=== THEME TOGGLE ===
+
+[1A[2KTheme buttons: 1
+
+[1A[2KTotal buttons on page: 15
+
+[1A[2K
+=== LOGIN BUTTON ===
+
+[1A[2KLogin buttons: 0
+
+[1A[2KLogin links: 1
+
+[1A[2K
+=== PAGINATION ===
+
+[1A[2K[31/69] [firefox] › tests/pagination.spec.ts:11:5 › Pagination › should navigate through multiple pages using next button
+[1A[2KNext buttons: 1
+
+[1A[2KPrevious buttons: 1
+
+[1A[2K[32/69] [firefox] › tests/pagination.spec.ts:72:5 › Pagination › should navigate using previous button
+[1A[2K[firefox] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+
+=== LOGIN PAGE ===
+
+[1A[2KLabels found: 2
+
+[1A[2K  Label: "Username *"
+
+[1A[2K  Label: "Password *"
+
+[1A[2K
+Username by label: 1, Password by label: 1
+
+[1A[2K[firefox] › tests/pagination.spec.ts:11:5 › Pagination › should navigate through multiple pages using next button
+Successfully navigated to page 2
+
+[1A[2KSuccessfully navigated to page 3
+
+[1A[2K[33/69] [firefox] › tests/pagination.spec.ts:109:5 › Pagination › should persist page state in URL
+[1A[2K[firefox] › tests/pagination.spec.ts:72:5 › Pagination › should navigate using previous button
+Successfully navigated back to page 1
+
+[1A[2K[34/69] [firefox] › tests/pagination.spec.ts:135:5 › Pagination › should allow direct navigation to specific page via URL
+[1A[2K[firefox] › tests/pagination.spec.ts:109:5 › Pagination › should persist page state in URL
+Page state persisted in URL after refresh
+
+[1A[2K[35/69] [firefox] › tests/pagination.spec.ts:161:5 › Pagination › should display page numbers correctly
+[1A[2K[firefox] › tests/pagination.spec.ts:161:5 › Pagination › should display page numbers correctly
+No page number indicators found
+
+[1A[2K[36/69] [firefox] › tests/pagination.spec.ts:192:5 › Pagination › should disable previous button on first page
+[1A[2K[firefox] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+
+After login URL: http://localhost:5173/admin
+
+[1A[2KLogout button: 1, Logout link: 0
+
+[1A[2K"Admin" text found: 0
+
+[1A[2K
+Links on page:
+
+[1A[2K  - "Blog App"
+
+[1A[2K  - "Home"
+
+[1A[2K  - "Dashboard"
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[37/69] [firefox] › tests/pagination.spec.ts:218:5 › Pagination › should disable next button on last page
+[1A[2K[firefox] › tests/pagination.spec.ts:218:5 › Pagination › should disable next button on last page
+Successfully reached last page (page 3)
+
+[1A[2K[38/69] [firefox] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination
+[1A[2K[firefox] › tests/pagination.spec.ts:135:5 › Pagination › should allow direct navigation to specific page via URL
+Successfully navigated directly to page 3 via URL
+
+[1A[2KFound 1 posts on page 3
+
+[1A[2K[39/69] [firefox] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+[1A[2K[firefox] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+Found 9 blog posts on the page
+
+[1A[2K[40/69] [firefox] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+[1A[2K[firefox] › tests/pagination.spec.ts:192:5 › Pagination › should disable previous button on first page
+Previous button is correctly disabled on first page
+
+[1A[2K[41/69] [firefox] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+[1A[2K  4) [firefox] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected substring: [32m"test"[39m
+    Received string:    [31m"http://localhost:5173/?page=2"[39m
+
+      279 |
+      280 |                 // Verify search parameter is still in URL
+    > 281 |                 expect(page.url()).toContain('test');
+          |                                    ^
+      282 |
+      283 |                 // Verify we're on page 2
+      284 |                 const currentPage = await getCurrentPageFromURL(page);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/pagination.spec.ts:281:36
+
+    Error Context: test-results/pagination-Pagination-shou-26185-ter-state-across-pagination-firefox/error-context.md
+
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+Successfully viewed blog post: Test Blog Post 1764574232136
+
+[1A[2K[42/69] [firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+[1A[2K[43/69] [firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+[1A[2K[firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Initial read posts: 0
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Initial theme: null
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+Search for "Test" returned 9 results
+
+[1A[2K[44/69] [firefox] › tests/public-viewing.spec.ts:229:5 › Public Blog Viewing › should allow anonymous users to like posts
+[1A[2K[firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+New theme after toggle: dark
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Read posts after viewing: 0
+
+[1A[2K  5) [firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+      198 |         const readPostsAfterView = await getReadPosts(page);
+      199 |         console.log(`Read posts after viewing: ${readPostsAfterView.length}`);
+    > 200 |         expect(readPostsAfterView.length).toBeGreaterThan(initialReadPosts.length);
+          |                                           ^
+      201 |
+      202 |         // Take screenshot showing read indicator
+      203 |         await page.screenshot({ path: 'test-results/blog-list-with-read.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/public-viewing.spec.ts:200:43
+
+    Error Context: test-results/public-viewing-Public-Blog-0572d-gs-visually-across-sessions-firefox/error-context.md
+
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Theme persisted after refresh: dark
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:229:5 › Public Blog Viewing › should allow anonymous users to like posts
+Like button not found, skipping like test
+
+[1A[2K[45/69] [firefox] › tests/seed.spec.ts:4:3 › Test group › seed
+[1A[2K[46/69] [firefox] › tests/public-viewing.spec.ts:258:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+[1A[2K[firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Theme persisted in new page: dark
+
+[1A[2K[47/69] [webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+[1A[2K[48/69] [webkit] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K  6) [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('xpath=(//button[contains(text(),"Publish")])[2]')[22m
+    [2m    - locator resolved to <button disabled tabindex="-1" type="button" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root">…</button>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    47 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is not enabled[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m  - element was detached from the DOM, retrying[22m
+
+
+      49 |         // Publish the post
+      50 |         const publishButton = page.locator('(//button[contains(text(),"Publish")])[2]');
+    > 51 |         await publishButton.click();
+         |                             ^
+      52 |
+      53 |         // Wait for success indication (could be redirect, toast, or message)
+      54 |         await page.waitForTimeout(2000);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:51:29
+
+    Error Context: test-results/blog-management-Blog-Manag-03cf6-ew-blog-post-and-publish-it-firefox/error-context.md
+
+
+[1A[2K[49/69] [webkit] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[firefox] › tests/public-viewing.spec.ts:258:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+Comment input not found, skipping comment test
+
+[1A[2K[50/69] [webkit] › tests/blog-management.spec.ts:133:5 › Blog Management › should handle draft and published status
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+
+=== CLICKING READ MORE ===
+
+[1A[2K  7) [firefox] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: /delete/i }).or(getByRole('menuitem', { name: /delete/i })).first()[22m
+
+
+      104 |
+      105 |         // Click delete button
+    > 106 |         await deleteButton.first().click();
+          |                                    ^
+      107 |
+      108 |         // Wait for confirmation dialog
+      109 |         await page.waitForTimeout(500);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:106:36
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-firefox/error-context.md
+
+
+[1A[2K[51/69] [webkit] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+[1A[2KCurrent URL: http://localhost:5173/blog/20
+
+[1A[2K
+=== BLOG POST PAGE ===
+
+[1A[2KH1: Test Blog Post 1764574232136
+
+[1A[2K
+Buttons on page:
+
+[1A[2K  - "Post Comment"
+
+[1A[2K
+Textareas: 2, Inputs: 1
+
+[1A[2KForms: 1
+
+[1A[2K
+=== LOGGING IN AS ADMIN ===
+
+[1A[2K[webkit] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== BLOG POST STRUCTURE ===
+
+[1A[2K
+Blog 1: Test Blog Post 1764574232136
+
+[1A[2K  Parent: <div> class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+
+[1A[2K  Grandparent: <article> class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root blog-post-card css-11ok493-MuiPaper-root-MuiCard-root"
+
+[1A[2K
+Blog 2: Test Blog Post 1764574205878
+
+[1A[2K  Parent: <div> class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+
+[1A[2K  Grandparent: <article> class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root blog-post-card css-11ok493-MuiPaper-root-MuiCard-root"
+
+[1A[2K
+=== NAVIGATING TO LOGIN ===
+
+[1A[2K
+=== LOGIN FORM STRUCTURE ===
+
+[1A[2KUsername input: name="null", placeholder="null", type="text"
+
+[1A[2KPassword input: name="null", placeholder="null"
+
+[1A[2KSubmit button text: "Login"
+
+[1A[2K
+=== NAVIGATING TO BLOG POST ===
+
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+After login URL: http://localhost:5173/admin
+
+[1A[2K
+=== NAVIGATING TO DASHBOARD ===
+
+[1A[2K
+=== NAVIGATING TO CREATE POST ===
+
+[1A[2K[webkit] › tests/detailed-inspect.spec.ts:3:1 › detailed DOM inspection
+
+=== BLOG POST PAGE STRUCTURE ===
+
+[1A[2KTotal buttons on post page: 15
+
+[1A[2K  Button: "" aria-label="toggle theme"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "Read More" aria-label="null"
+
+[1A[2K  Button: "" aria-label="Go to previous page"
+
+[1A[2K  Button: "1" aria-label="page 1"
+
+[1A[2K  Button: "2" aria-label="Go to page 2"
+
+[1A[2K  Button: "3" aria-label="Go to page 3"
+
+[1A[2K  Button: "" aria-label="Go to next page"
+
+[1A[2K
+Textareas found: 0
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[52/69] [webkit] › tests/inspect.spec.ts:3:1 › inspect UI elements
+[1A[2K[53/69] [webkit] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+[1A[2K[webkit] › tests/admin-inspect.spec.ts:3:1 › blog post and admin inspection
+Create post URL: http://localhost:5173/admin/blog/new
+
+[1A[2K
+=== INSPECTING CATEGORY SELECT ===
+
+[1A[2KCategory Label count: 0
+
+[1A[2KCategory Select (.MuiSelect-select) count: 2
+
+[1A[2KCategory Combobox count: 0
+
+[1A[2KCategory Select HTML: <div tabindex="0" role="combobox" aria-controls=":rd:" aria-expanded="false" aria-haspopup="listbox" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-10l5tdt-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"><span class="notranslate">​</span></div>
+
+[1A[2K
+=== INSPECTING PUBLISH BUTTON ===
+
+[1A[2KPublish Button (Role) count: 2
+
+[1A[2KPublish Button (XPath) count: 1
+
+[1A[2KPublish Button (Role) HTML: <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-standard MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButtonGroup-lastButton css-ueukts-MuiButtonBase-root-MuiToggleButton-root" tabindex="0" type="button" value="published" aria-pressed="false" aria-label="published">Published<span class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span></button>
+
+[1A[2KPublish Button (Role) Disabled: false
+
+[1A[2KPublish Button (XPath) HTML: <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="button" disabled=""><span class="MuiButton-icon MuiButton-startIcon MuiButton-iconSizeMedium css-1d6wzja-MuiButton-startIcon"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PublishIcon"><path d="M5 4v2h14V4zm0 10h4v6h6v-6h4l-7-7z"></path></svg></span>Publish Now</button>
+
+[1A[2KPublish Button (XPath) Disabled: true
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[54/69] [webkit] › tests/pagination.spec.ts:11:5 › Pagination › should navigate through multiple pages using next button
+[1A[2K[webkit] › tests/inspect.spec.ts:3:1 › inspect UI elements
+=== PAGE LOADED ===
+
+[1A[2K
+=== BLOG POST SELECTORS ===
+
+[1A[2KArticles found: 9
+
+[1A[2KDivs with 'post' in class: 0
+
+[1A[2KDivs with 'blog' in class: 0
+
+[1A[2KDivs with 'card' in class: 0
+
+[1A[2K
+=== BLOG TITLES ===
+
+[1A[2KH1 tags: 1, H2 tags: 9, H3 tags: 0
+
+[1A[2KFirst H2 text: Test Blog Post 1764574261306
+
+[1A[2K
+=== SEARCH INPUT ===
+
+[1A[2KSearch by placeholder: 1
+
+[1A[2KInput type=search: 0
+
+[1A[2KInput type=text: 1
+
+[1A[2K
+=== THEME TOGGLE ===
+
+[1A[2KTheme buttons: 1
+
+[1A[2KTotal buttons on page: 15
+
+[1A[2K
+=== LOGIN BUTTON ===
+
+[1A[2KLogin buttons: 0
+
+[1A[2KLogin links: 1
+
+[1A[2K
+=== PAGINATION ===
+
+[1A[2KNext buttons: 1
+
+[1A[2KPrevious buttons: 1
+
+[1A[2K[55/69] [webkit] › tests/pagination.spec.ts:72:5 › Pagination › should navigate using previous button
+[1A[2K[webkit] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+
+=== LOGIN PAGE ===
+
+[1A[2KLabels found: 2
+
+[1A[2K  Label: "Username *"
+
+[1A[2K  Label: "Password *"
+
+[1A[2K
+Username by label: 1, Password by label: 1
+
+[1A[2K[webkit] › tests/pagination.spec.ts:11:5 › Pagination › should navigate through multiple pages using next button
+Successfully navigated to page 2
+
+[1A[2KSuccessfully navigated to page 3
+
+[1A[2K[56/69] [webkit] › tests/pagination.spec.ts:109:5 › Pagination › should persist page state in URL
+[1A[2K[webkit] › tests/pagination.spec.ts:109:5 › Pagination › should persist page state in URL
+Page state persisted in URL after refresh
+
+[1A[2K[57/69] [webkit] › tests/pagination.spec.ts:135:5 › Pagination › should allow direct navigation to specific page via URL
+[1A[2K[webkit] › tests/pagination.spec.ts:72:5 › Pagination › should navigate using previous button
+Successfully navigated back to page 1
+
+[1A[2K[58/69] [webkit] › tests/pagination.spec.ts:161:5 › Pagination › should display page numbers correctly
+[1A[2K[webkit] › tests/pagination.spec.ts:161:5 › Pagination › should display page numbers correctly
+No page number indicators found
+
+[1A[2K[59/69] [webkit] › tests/pagination.spec.ts:192:5 › Pagination › should disable previous button on first page
+[1A[2K[webkit] › tests/login-inspect.spec.ts:3:1 › login flow inspection
+
+After login URL: http://localhost:5173/admin
+
+[1A[2KLogout button: 1, Logout link: 0
+
+[1A[2K"Admin" text found: 0
+
+[1A[2K
+Links on page:
+
+[1A[2K  - "Blog App"
+
+[1A[2K  - "Home"
+
+[1A[2K  - "Dashboard"
+
+[1A[2K
+=== INSPECTION COMPLETE ===
+
+[1A[2K[60/69] [webkit] › tests/pagination.spec.ts:218:5 › Pagination › should disable next button on last page
+[1A[2K[webkit] › tests/pagination.spec.ts:135:5 › Pagination › should allow direct navigation to specific page via URL
+Successfully navigated directly to page 3 via URL
+
+[1A[2KFound 2 posts on page 3
+
+[1A[2K[61/69] [webkit] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination
+[1A[2K  8) [webkit] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected substring: [32m"test"[39m
+    Received string:    [31m"http://localhost:5173/?page=2"[39m
+
+      279 |
+      280 |                 // Verify search parameter is still in URL
+    > 281 |                 expect(page.url()).toContain('test');
+          |                                    ^
+      282 |
+      283 |                 // Verify we're on page 2
+      284 |                 const currentPage = await getCurrentPageFromURL(page);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/pagination.spec.ts:281:36
+
+    Error Context: test-results/pagination-Pagination-shou-26185-ter-state-across-pagination-webkit/error-context.md
+
+
+[1A[2K[webkit] › tests/pagination.spec.ts:192:5 › Pagination › should disable previous button on first page
+Previous button is correctly disabled on first page
+
+[1A[2K[62/69] [webkit] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+[1A[2K[63/69] [webkit] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+[1A[2K[webkit] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+Found 9 blog posts on the page
+
+[1A[2K[64/69] [webkit] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+[1A[2K[webkit] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+Search for "Test" returned 9 results
+
+[1A[2K[65/69] [webkit] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+[1A[2K[webkit] › tests/pagination.spec.ts:218:5 › Pagination › should disable next button on last page
+Successfully reached last page (page 3)
+
+[1A[2K[66/69] [webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+[1A[2K[webkit] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Initial theme: null
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+Successfully viewed blog post: Test Blog Post 1764574261306
+
+[1A[2K[67/69] [webkit] › tests/public-viewing.spec.ts:229:5 › Public Blog Viewing › should allow anonymous users to like posts
+[1A[2K[webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Initial read posts: 0
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:229:5 › Public Blog Viewing › should allow anonymous users to like posts
+Like button not found, skipping like test
+
+[1A[2K[68/69] [webkit] › tests/public-viewing.spec.ts:258:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+[1A[2K[webkit] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+New theme after toggle: dark
+
+[1A[2KTheme persisted after refresh: dark
+
+[1A[2KTheme persisted in new page: dark
+
+[1A[2K[69/69] [webkit] › tests/seed.spec.ts:4:3 › Test group › seed
+[1A[2K[webkit] › tests/public-viewing.spec.ts:258:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+Comment input not found, skipping comment test
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Read posts after viewing: 0
+
+[1A[2K  9) [webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBeGreaterThan[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: > [32m0[39m
+    Received:   [31m0[39m
+
+      198 |         const readPostsAfterView = await getReadPosts(page);
+      199 |         console.log(`Read posts after viewing: ${readPostsAfterView.length}`);
+    > 200 |         expect(readPostsAfterView.length).toBeGreaterThan(initialReadPosts.length);
+          |                                           ^
+      201 |
+      202 |         // Take screenshot showing read indicator
+      203 |         await page.screenshot({ path: 'test-results/blog-list-with-read.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/public-viewing.spec.ts:200:43
+
+    Error Context: test-results/public-viewing-Public-Blog-0572d-gs-visually-across-sessions-webkit/error-context.md
+
+
+[1A[2K  10) [webkit] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('xpath=(//button[contains(text(),"Publish")])[2]')[22m
+    [2m    - locator resolved to <button disabled tabindex="-1" type="button" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorSuccess css-ke5b6m-MuiButtonBase-root-MuiButton-root">…</button>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is not enabled[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    51 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is not enabled[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m  - element was detached from the DOM, retrying[22m
+
+
+      49 |         // Publish the post
+      50 |         const publishButton = page.locator('(//button[contains(text(),"Publish")])[2]');
+    > 51 |         await publishButton.click();
+         |                             ^
+      52 |
+      53 |         // Wait for success indication (could be redirect, toast, or message)
+      54 |         await page.waitForTimeout(2000);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:51:29
+
+    Error Context: test-results/blog-management-Blog-Manag-03cf6-ew-blog-post-and-publish-it-webkit/error-context.md
+
+
+[1A[2K  11) [webkit] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: /delete/i }).or(getByRole('menuitem', { name: /delete/i })).first()[22m
+
+
+      104 |
+      105 |         // Click delete button
+    > 106 |         await deleteButton.first().click();
+          |                                    ^
+      107 |
+      108 |         // Wait for confirmation dialog
+      109 |         await page.waitForTimeout(500);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:106:36
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-webkit/error-context.md
+
+
+[1A[2K  11 failed
+    [chromium] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+    [chromium] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation 
+    [chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions 
+    [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+    [firefox] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation 
+    [firefox] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination 
+    [firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions 
+    [webkit] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+    [webkit] › tests/blog-management.spec.ts:76:5 › Blog Management › should delete a blog post with confirmation 
+    [webkit] › tests/pagination.spec.ts:261:5 › Pagination › should maintain search/filter state across pagination 
+    [webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions 
+  58 passed (1.5m)
+
+[36m  Serving HTML report at http://localhost:50126. Press Ctrl+C to quit.[39m

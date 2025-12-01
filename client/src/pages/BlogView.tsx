@@ -32,6 +32,8 @@ export default function BlogView() {
   const [liked, setLiked] = useState(false);
   const [socketConnected, setSocketConnected] = useState(false);
 
+  console.log('BlogView rendered, id:', id);
+
   // Comment form state
   const [commentContent, setCommentContent] = useState('');
   const [commentAuthor, setCommentAuthor] = useState('');
@@ -89,18 +91,25 @@ export default function BlogView() {
   };
 
   const fetchBlog = async () => {
+    console.log('Fetching blog...', id);
     try {
       setLoading(true);
       const response = await blogApi.getById(parseInt(id!));
+      console.log('Blog fetched:', response.data.title);
       setBlog(response.data);
 
       // Mark blog as read in localStorage
       const readBlogs = JSON.parse(localStorage.getItem('readBlogs') || '[]');
+      console.log('Current readBlogs:', readBlogs);
       if (!readBlogs.includes(parseInt(id!))) {
         readBlogs.push(parseInt(id!));
         localStorage.setItem('readBlogs', JSON.stringify(readBlogs));
+        console.log('Marked blog as read:', id, readBlogs);
+      } else {
+        console.log('Blog already read:', id);
       }
     } catch (err: any) {
+      console.error('Error fetching blog:', err);
       setError(err.response?.data?.error || 'Failed to fetch blog');
     } finally {
       setLoading(false);
@@ -244,6 +253,7 @@ export default function BlogView() {
             onClick={handleLike}
             disabled={liked}
             color={liked ? 'primary' : 'default'}
+            aria-label="like this post"
           >
             <ThumbUp fontSize="small" />
           </IconButton>
@@ -273,6 +283,7 @@ export default function BlogView() {
       )}
 
       <Box
+        className="blog-content"
         sx={{ mb: 4 }}
         dangerouslySetInnerHTML={{ __html: blog.content }}
       />
@@ -310,6 +321,7 @@ export default function BlogView() {
           <TextField
             fullWidth
             label={isAuthor ? "Your Comment (as Author)" : "Your Comment"}
+            aria-label="Your Comment"
             value={commentContent}
             onChange={(e) => setCommentContent(e.target.value)}
             multiline

@@ -1,0 +1,122 @@
+
+Running 9 tests using 5 workers
+
+[1A[2K[1/9] [chromium] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[2/9] [chromium] › tests/blog-management.spec.ts:161:5 › Blog Management › should handle draft and published status
+[1A[2K[3/9] [chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[4/9] [firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[5/9] [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[6/9] [firefox] › tests/blog-management.spec.ts:161:5 › Blog Management › should handle draft and published status
+[1A[2K[7/9] [webkit] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+Clicking delete icon...
+
+[1A[2KDelete dialog visible
+
+[1A[2KClicking confirm button...
+
+[1A[2K[firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+Clicking delete icon...
+
+[1A[2KDelete dialog visible
+
+[1A[2KClicking confirm button...
+
+[1A[2K[8/9] [webkit] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[9/9] [webkit] › tests/blog-management.spec.ts:161:5 › Blog Management › should handle draft and published status
+[1A[2K[webkit] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+Clicking delete icon...
+
+[1A[2KDelete dialog visible
+
+[1A[2KClicking confirm button...
+
+[1A[2K  1) [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Test Blog Post 1764576188545')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText('Test Blog Post 1764576188545')[22m
+
+
+      76 |         // Verify the post appears in the list
+      77 |         const postTitle = page.getByText(blogData.title);
+    > 78 |         await expect(postTitle).toBeVisible({ timeout: 10000 });
+         |                                 ^
+      79 |
+      80 |         // Take screenshot of published post
+      81 |         await page.screenshot({ path: 'test-results/after-publish.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:78:33
+
+    Error Context: test-results/blog-management-Blog-Manag-03cf6-ew-blog-post-and-publish-it-firefox/error-context.md
+
+
+[1A[2K  2) [firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Test Blog Post 1764576186510')
+    Expected: not visible
+    Received: visible
+    Timeout:  10000ms
+
+    Call log:
+    [2m  - Expect "not toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText('Test Blog Post 1764576186510')[22m
+    [2m    13 × locator resolved to <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root">Test Blog Post 1764576186510</td>[22m
+    [2m       - unexpected value "visible"[22m
+
+
+      153 |
+      154 |         // Verify the post is no longer visible
+    > 155 |         await expect(page.getByText(blogData.title)).not.toBeVisible({ timeout: 10000 });
+          |                                                          ^
+      156 |
+      157 |         // Take screenshot after deletion
+      158 |         await page.screenshot({ path: 'test-results/after-delete.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:155:58
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-firefox/error-context.md
+
+
+[1A[2K  3) [chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Test Blog Post 1764576185456')
+    Expected: not visible
+    Received: visible
+    Timeout:  10000ms
+
+    Call log:
+    [2m  - Expect "not toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText('Test Blog Post 1764576185456')[22m
+    [2m    14 × locator resolved to <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root">Test Blog Post 1764576185456</td>[22m
+    [2m       - unexpected value "visible"[22m
+
+
+      153 |
+      154 |         // Verify the post is no longer visible
+    > 155 |         await expect(page.getByText(blogData.title)).not.toBeVisible({ timeout: 10000 });
+          |                                                          ^
+      156 |
+      157 |         // Take screenshot after deletion
+      158 |         await page.screenshot({ path: 'test-results/after-delete.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:155:58
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-chromium/error-context.md
+
+
+[1A[2K  3 failed
+    [chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+    [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it 
+    [firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+  6 passed (25.8s)
+
+[36m  Serving HTML report at http://localhost:49476. Press Ctrl+C to quit.[39m

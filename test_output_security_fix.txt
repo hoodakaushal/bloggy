@@ -1,0 +1,169 @@
+
+Running 12 tests using 5 workers
+
+[1A[2K[1/12] [chromium] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[2/12] [chromium] › tests/security.spec.ts:57:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[3/12] [chromium] › tests/security.spec.ts:91:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[4/12] [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[5/12] [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[6/12] [firefox] › tests/security.spec.ts:57:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[7/12] [firefox] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[8/12] [firefox] › tests/security.spec.ts:91:5 › Security Tests › should prevent unauthorized API access
+[1A[2K  1) [firefox] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('alert').or(locator('.MuiAlert-message'))
+    Expected: visible
+    Error: strict mode violation: getByRole('alert').or(locator('.MuiAlert-message')) resolved to 2 elements:
+        1) <div role="alert" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-15jp4gd-MuiPaper-root-MuiAlert-root">…</div> aka getByRole('alert')
+        2) <div class="MuiAlert-message css-1pxa9xg-MuiAlert-message">Invalid credentials</div> aka getByText('Invalid credentials')
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('alert').or(locator('.MuiAlert-message'))[22m
+
+
+      84 |             // Should verify that we are NOT logged in
+      85 |             // Check for error message or stay on login page
+    > 86 |             await expect(page.getByRole('alert').or(page.locator('.MuiAlert-message'))).toBeVisible();
+         |                                                                                         ^
+      87 |             await expect(page).toHaveURL(/\/login/);
+      88 |         }
+      89 |     });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:86:89
+
+    Error Context: test-results/security-Security-Tests-sh-bc7a6-vent-SQL-injection-in-login-firefox/error-context.md
+
+
+[1A[2K[9/12] [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[10/12] [webkit] › tests/security.spec.ts:57:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K  2) [chromium] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('alert').or(locator('.MuiAlert-message'))
+    Expected: visible
+    Error: strict mode violation: getByRole('alert').or(locator('.MuiAlert-message')) resolved to 2 elements:
+        1) <div role="alert" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-15jp4gd-MuiPaper-root-MuiAlert-root">…</div> aka getByRole('alert')
+        2) <div class="MuiAlert-message css-1pxa9xg-MuiAlert-message">Invalid credentials</div> aka getByText('Invalid credentials')
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('alert').or(locator('.MuiAlert-message'))[22m
+
+
+      84 |             // Should verify that we are NOT logged in
+      85 |             // Check for error message or stay on login page
+    > 86 |             await expect(page.getByRole('alert').or(page.locator('.MuiAlert-message'))).toBeVisible();
+         |                                                                                         ^
+      87 |             await expect(page).toHaveURL(/\/login/);
+      88 |         }
+      89 |     });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:86:89
+
+    Error Context: test-results/security-Security-Tests-sh-bc7a6-vent-SQL-injection-in-login-chromium/error-context.md
+
+
+[1A[2K[11/12] [webkit] › tests/security.spec.ts:91:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[12/12] [webkit] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login
+[1A[2K  3) [webkit] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('alert').or(locator('.MuiAlert-message'))
+    Expected: visible
+    Error: strict mode violation: getByRole('alert').or(locator('.MuiAlert-message')) resolved to 2 elements:
+        1) <div role="alert" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-15jp4gd-MuiPaper-root-MuiAlert-root">…</div> aka getByRole('alert')
+        2) <div class="MuiAlert-message css-1pxa9xg-MuiAlert-message">Invalid credentials</div> aka getByText('Invalid credentials')
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('alert').or(locator('.MuiAlert-message'))[22m
+
+
+      84 |             // Should verify that we are NOT logged in
+      85 |             // Check for error message or stay on login page
+    > 86 |             await expect(page.getByRole('alert').or(page.locator('.MuiAlert-message'))).toBeVisible();
+         |                                                                                         ^
+      87 |             await expect(page).toHaveURL(/\/login/);
+      88 |         }
+      89 |     });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:86:89
+
+    Error Context: test-results/security-Security-Tests-sh-bc7a6-vent-SQL-injection-in-login-webkit/error-context.md
+
+
+[1A[2K  4) [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments 
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByLabel(/Your Name/i)[22m
+
+
+      26 |
+      27 |         // Fill in name (required for anonymous)
+    > 28 |         await page.getByLabel(/Your Name/i).fill('Hacker');
+         |                                             ^
+      29 |
+      30 |         // Fill in comment
+      31 |         const commentInput = page.getByLabel(/Your Comment/i);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:28:45
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-chromium/error-context.md
+
+
+[1A[2K  5) [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByLabel(/Your Name/i)[22m
+
+
+      26 |
+      27 |         // Fill in name (required for anonymous)
+    > 28 |         await page.getByLabel(/Your Name/i).fill('Hacker');
+         |                                             ^
+      29 |
+      30 |         // Fill in comment
+      31 |         const commentInput = page.getByLabel(/Your Comment/i);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:28:45
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-firefox/error-context.md
+
+
+[1A[2K  6) [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for getByLabel(/Your Name/i)[22m
+
+
+      26 |
+      27 |         // Fill in name (required for anonymous)
+    > 28 |         await page.getByLabel(/Your Name/i).fill('Hacker');
+         |                                             ^
+      29 |
+      30 |         // Fill in comment
+      31 |         const commentInput = page.getByLabel(/Your Comment/i);
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:28:45
+
+    Error Context: test-results/security-Security-Tests-should-prevent-XSS-in-blog-comments-webkit/error-context.md
+
+
+[1A[2K  6 failed
+    [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ─
+    [chromium] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login 
+    [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ──
+    [firefox] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login 
+    [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments ───
+    [webkit] › tests/security.spec.ts:70:5 › Security Tests › should prevent SQL injection in login 
+  6 passed (33.7s)
+
+[36m  Serving HTML report at http://localhost:58056. Press Ctrl+C to quit.[39m

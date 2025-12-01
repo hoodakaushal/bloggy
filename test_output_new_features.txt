@@ -1,0 +1,385 @@
+
+Running 30 tests using 5 workers
+
+[1A[2K[1/30] [chromium] › tests/gremlin.spec.ts:60:5 › Gremlin (Chaos) Tests › should survive chaos on admin dashboard
+[1A[2K[2/30] [chromium] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[3/30] [chromium] › tests/gremlin.spec.ts:38:5 › Gremlin (Chaos) Tests › should survive chaos on home page
+[1A[2K[4/30] [chromium] › tests/security.spec.ts:50:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[5/30] [chromium] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[6/30] [chromium] › tests/security.spec.ts:84:5 › Security Tests › should prevent unauthorized API access
+[1A[2K  1) [chromium] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('alert').or(locator('.MuiAlert-message'))
+    Expected: visible
+    Error: strict mode violation: getByRole('alert').or(locator('.MuiAlert-message')) resolved to 2 elements:
+        1) <div role="alert" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-15jp4gd-MuiPaper-root-MuiAlert-root">…</div> aka getByRole('alert')
+        2) <div class="MuiAlert-message css-1pxa9xg-MuiAlert-message">Invalid credentials</div> aka getByText('Invalid credentials')
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('alert').or(locator('.MuiAlert-message'))[22m
+
+
+      77 |             // Should verify that we are NOT logged in
+      78 |             // Check for error message or stay on login page
+    > 79 |             await expect(page.getByRole('alert').or(page.locator('.MuiAlert-message'))).toBeVisible();
+         |                                                                                         ^
+      80 |             await expect(page).toHaveURL(/\/login/);
+      81 |         }
+      82 |     });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:79:89
+
+    Error Context: test-results/security-Security-Tests-sh-bc7a6-vent-SQL-injection-in-login-chromium/error-context.md
+
+
+[1A[2K[7/30] [chromium] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K[8/30] [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K  2) [chromium] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot ────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/login-page-chromium-darwin.png, writing actual.
+
+      14 |         await page.goto('/login');
+      15 |         await page.waitForLoadState('networkidle');
+    > 16 |         await expect(page).toHaveScreenshot('login-page.png');
+         |         ^
+      17 |     });
+      18 |
+      19 |     test('blog view snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:16:9
+
+    attachment #1: login-page (image/png) ──────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/login-page-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-login-page-snapshot-chromium/login-page-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-login-page-snapshot-chromium/error-context.md
+
+
+[1A[2K[9/30] [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot
+[1A[2K  3) [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ──────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/home-page-chromium-darwin.png, writing actual.
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Mask dynamic content like dates or random IDs if necessary
+    > 10 |         await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
+         |         ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:9
+
+    attachment #1: home-page (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/home-page-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-home-page-snapshot-chromium/home-page-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-home-page-snapshot-chromium/error-context.md
+
+
+[1A[2K[10/30] [chromium] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K  4) [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ─────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/blog-view-chromium-darwin.png, writing actual.
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Mask comments section as it might be dynamic
+    > 29 |             await expect(page).toHaveScreenshot('blog-view.png', {
+         |             ^
+      30 |                 fullPage: true,
+      31 |                 mask: [page.locator('.comments-section')]
+      32 |             });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:13
+
+    attachment #1: blog-view (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/blog-view-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-chromium/blog-view-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-chromium/error-context.md
+
+
+[1A[2K[11/30] [firefox] › tests/gremlin.spec.ts:38:5 › Gremlin (Chaos) Tests › should survive chaos on home page
+[1A[2K  5) [chromium] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ───
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/admin-dashboard-chromium-darwin.png, writing actual.
+
+      39 |         await page.waitForLoadState('networkidle');
+      40 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 41 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |         ^
+      42 |             fullPage: true,
+      43 |             mask: [page.locator('table tbody')]
+      44 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:41:9
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-chromium-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/admin-dashboard-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-chromium/error-context.md
+
+
+[1A[2K[12/30] [firefox] › tests/gremlin.spec.ts:60:5 › Gremlin (Chaos) Tests › should survive chaos on admin dashboard
+[1A[2K[13/30] [firefox] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K[14/30] [firefox] › tests/security.spec.ts:50:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[15/30] [firefox] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login
+[1A[2K[16/30] [firefox] › tests/security.spec.ts:84:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[17/30] [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[18/30] [firefox] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K  6) [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ───────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/home-page-firefox-darwin.png, writing actual.
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Mask dynamic content like dates or random IDs if necessary
+    > 10 |         await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
+         |         ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:9
+
+    attachment #1: home-page (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/home-page-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-home-page-snapshot-firefox/home-page-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-home-page-snapshot-firefox/error-context.md
+
+
+[1A[2K  7) [firefox] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('alert').or(locator('.MuiAlert-message'))
+    Expected: visible
+    Error: strict mode violation: getByRole('alert').or(locator('.MuiAlert-message')) resolved to 2 elements:
+        1) <div role="alert" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-15jp4gd-MuiPaper-root-MuiAlert-root">…</div> aka getByRole('alert')
+        2) <div class="MuiAlert-message css-1pxa9xg-MuiAlert-message">Invalid credentials</div> aka getByText('Invalid credentials')
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('alert').or(locator('.MuiAlert-message'))[22m
+
+
+      77 |             // Should verify that we are NOT logged in
+      78 |             // Check for error message or stay on login page
+    > 79 |             await expect(page.getByRole('alert').or(page.locator('.MuiAlert-message'))).toBeVisible();
+         |                                                                                         ^
+      80 |             await expect(page).toHaveURL(/\/login/);
+      81 |         }
+      82 |     });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:79:89
+
+    Error Context: test-results/security-Security-Tests-sh-bc7a6-vent-SQL-injection-in-login-firefox/error-context.md
+
+
+[1A[2K[19/30] [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot
+[1A[2K[20/30] [firefox] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K  8) [firefox] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot ─────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/login-page-firefox-darwin.png, writing actual.
+
+      14 |         await page.goto('/login');
+      15 |         await page.waitForLoadState('networkidle');
+    > 16 |         await expect(page).toHaveScreenshot('login-page.png');
+         |         ^
+      17 |     });
+      18 |
+      19 |     test('blog view snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:16:9
+
+    attachment #1: login-page (image/png) ──────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/login-page-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-login-page-snapshot-firefox/login-page-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-login-page-snapshot-firefox/error-context.md
+
+
+[1A[2K[21/30] [webkit] › tests/gremlin.spec.ts:38:5 › Gremlin (Chaos) Tests › should survive chaos on home page
+[1A[2K[22/30] [webkit] › tests/gremlin.spec.ts:60:5 › Gremlin (Chaos) Tests › should survive chaos on admin dashboard
+[1A[2K  9) [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ──────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/blog-view-firefox-darwin.png, writing actual.
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Mask comments section as it might be dynamic
+    > 29 |             await expect(page).toHaveScreenshot('blog-view.png', {
+         |             ^
+      30 |                 fullPage: true,
+      31 |                 mask: [page.locator('.comments-section')]
+      32 |             });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:13
+
+    attachment #1: blog-view (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/blog-view-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-firefox/blog-view-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-firefox/error-context.md
+
+
+[1A[2K[23/30] [webkit] › tests/security.spec.ts:6:5 › Security Tests › should prevent XSS in blog comments
+[1A[2K  10) [firefox] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ───
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/admin-dashboard-firefox-darwin.png, writing actual.
+
+      39 |         await page.waitForLoadState('networkidle');
+      40 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 41 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |         ^
+      42 |             fullPage: true,
+      43 |             mask: [page.locator('table tbody')]
+      44 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:41:9
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-firefox-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/admin-dashboard-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-firefox/error-context.md
+
+
+[1A[2K[24/30] [webkit] › tests/security.spec.ts:50:5 › Security Tests › should redirect unauthenticated users from admin routes
+[1A[2K[25/30] [webkit] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login
+[1A[2K  11) [webkit] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('alert').or(locator('.MuiAlert-message'))
+    Expected: visible
+    Error: strict mode violation: getByRole('alert').or(locator('.MuiAlert-message')) resolved to 2 elements:
+        1) <div role="alert" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorError MuiAlert-standardError MuiAlert-standard css-15jp4gd-MuiPaper-root-MuiAlert-root">…</div> aka getByRole('alert')
+        2) <div class="MuiAlert-message css-1pxa9xg-MuiAlert-message">Invalid credentials</div> aka getByText('Invalid credentials')
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 5000ms[22m
+    [2m  - waiting for getByRole('alert').or(locator('.MuiAlert-message'))[22m
+
+
+      77 |             // Should verify that we are NOT logged in
+      78 |             // Check for error message or stay on login page
+    > 79 |             await expect(page.getByRole('alert').or(page.locator('.MuiAlert-message'))).toBeVisible();
+         |                                                                                         ^
+      80 |             await expect(page).toHaveURL(/\/login/);
+      81 |         }
+      82 |     });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/security.spec.ts:79:89
+
+    Error Context: test-results/security-Security-Tests-sh-bc7a6-vent-SQL-injection-in-login-webkit/error-context.md
+
+
+[1A[2K[26/30] [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot
+[1A[2K[27/30] [webkit] › tests/security.spec.ts:84:5 › Security Tests › should prevent unauthorized API access
+[1A[2K[28/30] [webkit] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot
+[1A[2K  12) [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ───────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/home-page-webkit-darwin.png, writing actual.
+
+       8 |         await page.waitForLoadState('networkidle');
+       9 |         // Mask dynamic content like dates or random IDs if necessary
+    > 10 |         await expect(page).toHaveScreenshot('home-page.png', { fullPage: true });
+         |         ^
+      11 |     });
+      12 |
+      13 |     test('login page snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:10:9
+
+    attachment #1: home-page (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/home-page-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-home-page-snapshot-webkit/home-page-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-home-page-snapshot-webkit/error-context.md
+
+
+[1A[2K[29/30] [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot
+[1A[2K  13) [webkit] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot ─────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/login-page-webkit-darwin.png, writing actual.
+
+      14 |         await page.goto('/login');
+      15 |         await page.waitForLoadState('networkidle');
+    > 16 |         await expect(page).toHaveScreenshot('login-page.png');
+         |         ^
+      17 |     });
+      18 |
+      19 |     test('blog view snapshot', async ({ page }) => {
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:16:9
+
+    attachment #1: login-page (image/png) ──────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/login-page-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-login-page-snapshot-webkit/login-page-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-login-page-snapshot-webkit/error-context.md
+
+
+[1A[2K[30/30] [webkit] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot
+[1A[2K  14) [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ──────────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/blog-view-webkit-darwin.png, writing actual.
+
+      27 |             await page.waitForLoadState('networkidle');
+      28 |             // Mask comments section as it might be dynamic
+    > 29 |             await expect(page).toHaveScreenshot('blog-view.png', {
+         |             ^
+      30 |                 fullPage: true,
+      31 |                 mask: [page.locator('.comments-section')]
+      32 |             });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:29:13
+
+    attachment #1: blog-view (image/png) ───────────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/blog-view-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-webkit/blog-view-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-blog-view-snapshot-webkit/error-context.md
+
+
+[1A[2K  15) [webkit] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ────
+
+    Error: A snapshot doesn't exist at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts-snapshots/admin-dashboard-webkit-darwin.png, writing actual.
+
+      39 |         await page.waitForLoadState('networkidle');
+      40 |         // Mask the table rows as they contain dynamic dates/IDs
+    > 41 |         await expect(page).toHaveScreenshot('admin-dashboard.png', {
+         |         ^
+      42 |             fullPage: true,
+      43 |             mask: [page.locator('table tbody')]
+      44 |         });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/visual.spec.ts:41:9
+
+    attachment #1: admin-dashboard (image/png) ─────────────────────────────────────────────────────
+    Expected: tests/visual.spec.ts-snapshots/admin-dashboard-webkit-darwin.png
+    Received: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/admin-dashboard-actual.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/visual-Visual-Regression-Tests-admin-dashboard-snapshot-webkit/error-context.md
+
+
+[1A[2K  15 failed
+    [chromium] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login 
+    [chromium] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ───────────
+    [chromium] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot ─────────
+    [chromium] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ──────────
+    [chromium] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ────
+    [firefox] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login 
+    [firefox] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ────────────
+    [firefox] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot ──────────
+    [firefox] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ───────────
+    [firefox] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ─────
+    [webkit] › tests/security.spec.ts:63:5 › Security Tests › should prevent SQL injection in login 
+    [webkit] › tests/visual.spec.ts:6:5 › Visual Regression Tests › home page snapshot ─────────────
+    [webkit] › tests/visual.spec.ts:13:5 › Visual Regression Tests › login page snapshot ───────────
+    [webkit] › tests/visual.spec.ts:19:5 › Visual Regression Tests › blog view snapshot ────────────
+    [webkit] › tests/visual.spec.ts:36:5 › Visual Regression Tests › admin dashboard snapshot ──────
+  15 passed (38.6s)
+
+[36m  Serving HTML report at http://localhost:57811. Press Ctrl+C to quit.[39m

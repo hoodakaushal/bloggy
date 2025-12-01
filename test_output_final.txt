@@ -1,0 +1,463 @@
+
+Running 30 tests using 5 workers
+
+[1A[2K[1/30] [chromium] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[2/30] [chromium] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+[1A[2K[3/30] [chromium] › tests/blog-management.spec.ts:157:5 › Blog Management › should handle draft and published status
+[1A[2K[4/30] [chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[5/30] [chromium] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+[1A[2K[chromium] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+Found 9 blog posts on the page
+
+[1A[2K[6/30] [chromium] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+[1A[2K[chromium] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+Search for "Test" returned 9 results
+
+[1A[2K[7/30] [chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+[1A[2K[chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Initial theme: null
+
+[1A[2K[chromium] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+Successfully viewed blog post: Test Blog Post 1764575175831
+
+[1A[2K[8/30] [chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+[1A[2K[chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+BROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KBROWSER LOG: TEST LOG: Console listener working
+
+[1A[2KInitial read posts: 0
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 50
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 50
+
+[1A[2KBROWSER LOG: Fetching blog... 50
+
+[1A[2KBROWSER LOG: Fetching blog... 50
+
+[1A[2KBROWSER LOG: Blog fetched: Test Blog Post 1764575175831
+
+[1A[2KBROWSER LOG: Current readBlogs: []
+
+[1A[2KBROWSER LOG: Marked blog as read: 50 [50]
+
+[1A[2KBROWSER LOG: Blog fetched: Test Blog Post 1764575175831
+
+[1A[2KBROWSER LOG: Current readBlogs: [50]
+
+[1A[2KBROWSER LOG: Blog already read: 50
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 50
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 50
+
+[1A[2KBROWSER LOG: WebSocket connected: undefined
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 50
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 50
+
+[1A[2KBROWSER LOG: WebSocket connected: kKv8vRKZvDtOiQjkAAD7
+
+[1A[2K[chromium] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+New theme after toggle: dark
+
+[1A[2KTheme persisted after refresh: dark
+
+[1A[2KTheme persisted in new page: dark
+
+[1A[2K[9/30] [chromium] › tests/public-viewing.spec.ts:238:5 › Public Blog Viewing › should allow anonymous users to like posts
+[1A[2K[chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Current URL: http://localhost:5173/blog/50
+
+[1A[2KLocalStorage state: [50]
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KRead posts after viewing: 1
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2K[10/30] [chromium] › tests/public-viewing.spec.ts:267:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+[1A[2K[chromium] › tests/public-viewing.spec.ts:267:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+Comment input not found, skipping comment test
+
+[1A[2K[11/30] [firefox] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[chromium] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Read status persisted after refresh
+
+[1A[2KRead status persisted in new page
+
+[1A[2K[12/30] [firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[chromium] › tests/public-viewing.spec.ts:238:5 › Public Blog Viewing › should allow anonymous users to like posts
+Like button not found, skipping like test
+
+[1A[2K[13/30] [firefox] › tests/blog-management.spec.ts:157:5 › Blog Management › should handle draft and published status
+[1A[2K[14/30] [firefox] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+[1A[2K[firefox] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+Found 9 blog posts on the page
+
+[1A[2K[15/30] [firefox] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+[1A[2K[firefox] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+Search for "Test" returned 9 results
+
+[1A[2K[16/30] [firefox] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+[1A[2K[17/30] [firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+[1A[2K[firefox] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+Successfully viewed blog post: Test Blog Post 1764575334954
+
+[1A[2K[18/30] [firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+[1A[2K[firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Initial theme: null
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+BROWSER LOG: Failed to fetch categories: JSHandle@object
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KBROWSER LOG: TEST LOG: Console listener working
+
+[1A[2KInitial read posts: 0
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: Fetching blog... 54
+
+[1A[2KBROWSER LOG: Fetching blog... 54
+
+[1A[2KBROWSER LOG: Blog fetched: Test Blog Post 1764575346684
+
+[1A[2KBROWSER LOG: Current readBlogs: Array
+
+[1A[2KBROWSER LOG: Marked blog as read: 54 Array
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: Blog fetched: Test Blog Post 1764575346684
+
+[1A[2KBROWSER LOG: Current readBlogs: Array
+
+[1A[2KBROWSER LOG: Blog already read: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: WebSocket connected: undefined
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: WebSocket connected: dSRz_s1BECsPcb_BAAD_
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+New theme after toggle: dark
+
+[1A[2KTheme persisted after refresh: dark
+
+[1A[2KTheme persisted in new page: dark
+
+[1A[2K[19/30] [firefox] › tests/public-viewing.spec.ts:238:5 › Public Blog Viewing › should allow anonymous users to like posts
+[1A[2K[firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Current URL: http://localhost:5173/blog/54
+
+[1A[2KLocalStorage state: [54]
+
+[1A[2KBROWSER LOG: Failed to fetch comments: JSHandle@object
+
+[1A[2KBROWSER LOG: WebSocket disconnected
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: WebSocket disconnected
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 54
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KRead posts after viewing: 1
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:238:5 › Public Blog Viewing › should allow anonymous users to like posts
+Like button not found, skipping like test
+
+[1A[2K[20/30] [firefox] › tests/public-viewing.spec.ts:267:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+[1A[2K[firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Read status persisted after refresh
+
+[1A[2K  1) [chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Test Blog Post 1764575334954')
+    Expected: not visible
+    Received: visible
+    Timeout:  10000ms
+
+    Call log:
+    [2m  - Expect "not toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText('Test Blog Post 1764575334954')[22m
+    [2m    14 × locator resolved to <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root">Test Blog Post 1764575334954</td>[22m
+    [2m       - unexpected value "visible"[22m
+
+
+      149 |
+      150 |         // Verify the post is no longer visible
+    > 151 |         await expect(page.getByText(blogData.title)).not.toBeVisible({ timeout: 10000 });
+          |                                                          ^
+      152 |
+      153 |         // Take screenshot after deletion
+      154 |         await page.screenshot({ path: 'test-results/after-delete.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:151:58
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-chromium/error-context.md
+
+
+[1A[2K[21/30] [webkit] › tests/blog-management.spec.ts:15:5 › Blog Management › should create a new blog post and publish it
+[1A[2K[22/30] [webkit] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation
+[1A[2K[firefox] › tests/public-viewing.spec.ts:267:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+Comment input not found, skipping comment test
+
+[1A[2K[firefox] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+Read status persisted in new page
+
+[1A[2K[23/30] [webkit] › tests/blog-management.spec.ts:157:5 › Blog Management › should handle draft and published status
+[1A[2K[24/30] [webkit] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+[1A[2K[webkit] › tests/public-viewing.spec.ts:11:5 › Public Blog Viewing › should view list of published blogs
+Found 9 blog posts on the page
+
+[1A[2K[25/30] [webkit] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+[1A[2K[webkit] › tests/public-viewing.spec.ts:39:5 › Public Blog Viewing › should search for blogs by keyword
+Search for "Test" returned 9 results
+
+[1A[2K[26/30] [webkit] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+[1A[2K[webkit] › tests/public-viewing.spec.ts:86:5 › Public Blog Viewing › should view a blog post
+Successfully viewed blog post: Test Blog Post 1764575358492
+
+[1A[2K[27/30] [webkit] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+[1A[2K[webkit] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+Initial theme: null
+
+[1A[2K[28/30] [webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+[1A[2K[webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+BROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KBROWSER LOG: Failed to fetch categories: AxiosError
+
+[1A[2KBROWSER LOG: Failed to fetch categories: AxiosError
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KBROWSER LOG: TEST LOG: Console listener working
+
+[1A[2KInitial read posts: 0
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:130:5 › Public Blog Viewing › should persist theme preference across sessions
+New theme after toggle: dark
+
+[1A[2KTheme persisted after refresh: dark
+
+[1A[2KTheme persisted in new page: dark
+
+[1A[2K[29/30] [webkit] › tests/public-viewing.spec.ts:238:5 › Public Blog Viewing › should allow anonymous users to like posts
+[1A[2K[30/30] [webkit] › tests/public-viewing.spec.ts:267:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+[1A[2K[webkit] › tests/public-viewing.spec.ts:238:5 › Public Blog Viewing › should allow anonymous users to like posts
+Like button not found, skipping like test
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+BROWSER LOG: BlogView rendered, id: 57
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 57
+
+[1A[2KBROWSER LOG: Fetching blog... 57
+
+[1A[2KBROWSER LOG: Fetching blog... 57
+
+[1A[2KBROWSER LOG: Blog fetched: Test Blog Post 1764575358745
+
+[1A[2KBROWSER LOG: Current readBlogs: []
+
+[1A[2KBROWSER LOG: Marked blog as read: 57 [57]
+
+[1A[2KBROWSER LOG: Blog fetched: Test Blog Post 1764575358745
+
+[1A[2KBROWSER LOG: Current readBlogs: [57]
+
+[1A[2KBROWSER LOG: Blog already read: 57
+
+[1A[2KBROWSER LOG: WebSocket connected: undefined
+
+[1A[2KBROWSER LOG: WebSocket connected: YWMFZXRDtXMZuVGNAAED
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 57
+
+[1A[2KBROWSER LOG: BlogView rendered, id: 57
+
+[1A[2K  2) [firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Test Blog Post 1764575347613')
+    Expected: not visible
+    Received: visible
+    Timeout:  10000ms
+
+    Call log:
+    [2m  - Expect "not toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText('Test Blog Post 1764575347613')[22m
+    [2m    14 × locator resolved to <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root">Test Blog Post 1764575347613</td>[22m
+    [2m       - unexpected value "visible"[22m
+
+
+      149 |
+      150 |         // Verify the post is no longer visible
+    > 151 |         await expect(page.getByText(blogData.title)).not.toBeVisible({ timeout: 10000 });
+          |                                                          ^
+      152 |
+      153 |         // Take screenshot after deletion
+      154 |         await page.screenshot({ path: 'test-results/after-delete.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:151:58
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-firefox/error-context.md
+
+
+[1A[2KCurrent URL: http://localhost:5173/blog/57
+
+[1A[2KLocalStorage state: [57]
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KRead posts after viewing: 1
+
+[1A[2KBROWSER LOG: [vite] connecting...
+
+[1A[2KBROWSER LOG: [vite] connected.
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:267:5 › Public Blog Viewing › should allow anonymous users to comment on posts
+Comment input not found, skipping comment test
+
+[1A[2K[webkit] › tests/public-viewing.spec.ts:172:5 › Public Blog Viewing › should mark read blogs visually across sessions
+BROWSER LOG: ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+[1A[2KBROWSER LOG: ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+[1A[2KRead status persisted after refresh
+
+[1A[2KRead status persisted in new page
+
+[1A[2K  3) [webkit] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).not.[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator:  getByText('Test Blog Post 1764575358745')
+    Expected: not visible
+    Received: visible
+    Timeout:  10000ms
+
+    Call log:
+    [2m  - Expect "not toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText('Test Blog Post 1764575358745')[22m
+    [2m    14 × locator resolved to <td class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root">Test Blog Post 1764575358745</td>[22m
+    [2m       - unexpected value "visible"[22m
+
+
+      149 |
+      150 |         // Verify the post is no longer visible
+    > 151 |         await expect(page.getByText(blogData.title)).not.toBeVisible({ timeout: 10000 });
+          |                                                          ^
+      152 |
+      153 |         // Take screenshot after deletion
+      154 |         await page.screenshot({ path: 'test-results/after-delete.png', fullPage: true });
+        at /Users/vybhav/Documents/vybhi/bloggy/tests/blog-management.spec.ts:151:58
+
+    Error Context: test-results/blog-management-Blog-Manag-b5fae-blog-post-with-confirmation-webkit/error-context.md
+
+
+[1A[2K  3 failed
+    [chromium] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+    [firefox] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+    [webkit] › tests/blog-management.spec.ts:100:5 › Blog Management › should delete a blog post with confirmation 
+  27 passed (45.8s)
+
+[36m  Serving HTML report at http://localhost:60942. Press Ctrl+C to quit.[39m
