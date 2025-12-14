@@ -1,4 +1,5 @@
-import { Page, expect } from '@playwright/test';
+import { Page, expect, Locator } from '@playwright/test';
+import { fuzzyClass } from '../utils/helper';
 
 export async function verifyBlogContent(page: Page, expectedHeadings: string[]) {
   // Select blog container by stable element — the <div> containing the blog
@@ -15,16 +16,20 @@ export async function getLikes(page: Page) {
     return number;
 }
 
+export function getLikeButton(page: Page): Locator {
+  return  page.locator('button:has(svg[data-testid="ThumbUpIcon"])');
+}
+
 export async function clickLike(page: Page) {
-  const likeButton = page.locator('button:has(svg[data-testid="ThumbUpIcon"])');
-  await likeButton.click();
+  await getLikeButton(page).click()
+}
+
+export async function checkLikeDisabled(page: Page) {
+  await expect(getLikeButton(page)).toBeDisabled();
 }
 
 export async function getTotalComments(page: Page): Promise<number> {
-  // Locate the comments list
-  const commentsList = page.locator('ul:has(li)'); // selects the <ul> that has <li> children
-  // Count the number of <li> items
-  const count = await commentsList.locator('li').count();
+  const count = await fuzzyClass(page,'MuiListItemText-root').count();
   return count;
 }
 
@@ -49,9 +54,12 @@ export async function validateLatestComment(
   expectedTitle: string,
   expectedBody: string
 ) {
-const titleLocator = page.locator('h6[class*="MuiTypography-subtitle2"]').first();
-    await expect(titleLocator).toHaveText(expectedTitle);
-    const comment = page.locator('p', { hasText: expectedBody });
-  await expect(comment).toBeVisible();
+await expect(
+  page.getByRole('heading', { name: expectedTitle })
+).toBeVisible();
+
+await expect(
+  page.getByText(expectedBody)
+).toBeVisible();
 
 }
