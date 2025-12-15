@@ -61,5 +61,14 @@ await expect(
 await expect(
   page.getByText(expectedBody)
 ).toBeVisible();
+}
 
+export async function getViewsCount(page: Page): Promise<number> {
+  const viewsText = await page
+    .locator('p.MuiTypography-body2')
+    .filter({ hasText: /views/i })
+    .first()
+    .textContent();
+
+  return Number(viewsText?.match(/\d+/)?.[0]);
 }

@@ -1,0 +1,135 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Blog App" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "Dashboard" [ref=e8] [cursor=pointer]:
+          - /url: /admin
+          - text: Dashboard
+        - button "Logout" [ref=e9] [cursor=pointer]: Logout
+        - button "Switch to dark mode" [ref=e10] [cursor=pointer]:
+          - img [ref=e11]
+  - generic [ref=e13]:
+    - heading "Edit Blog Post" [level=1] [ref=e14]
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - text: Title
+          - generic [ref=e19]: "*"
+        - generic [ref=e20]:
+          - textbox "Title" [ref=e21]: Modern React Patterns in 2024
+          - group:
+            - generic: Title *
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - text: Excerpt
+          - generic [ref=e24]: "*"
+        - generic [ref=e25]:
+          - textbox "Excerpt" [ref=e26]: Explore the latest patterns and best practices for building scalable React applications.
+          - group:
+            - generic: Excerpt *
+        - paragraph [ref=e27]: A short summary that appears in the blog list
+      - generic [ref=e28]:
+        - heading "Featured Image (Optional)" [level=6] [ref=e29]
+        - generic [ref=e30]:
+          - button "Upload Image" [ref=e31] [cursor=pointer]:
+            - img [ref=e33]
+            - text: Upload Image
+          - generic [ref=e35]: "Max 5MB. Allowed: JPG, PNG, GIF, WebP"
+      - generic [ref=e36]:
+        - heading "Content" [level=6] [ref=e37]
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e41]:
+              - button "Normal" [ref=e42] [cursor=pointer]:
+                - text: Normal
+                - img [ref=e43]
+              - text: Heading 1 Heading 2 Heading 3 Normal
+            - generic [ref=e46]:
+              - button [ref=e47] [cursor=pointer]:
+                - img [ref=e48]
+              - button [ref=e51] [cursor=pointer]:
+                - img [ref=e52]
+              - button [ref=e54] [cursor=pointer]:
+                - img [ref=e55]
+              - button [ref=e58] [cursor=pointer]:
+                - img [ref=e59]
+            - generic [ref=e63]:
+              - button [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+              - button [ref=e69] [cursor=pointer]:
+                - img [ref=e70]
+            - generic [ref=e71]:
+              - button [ref=e73] [cursor=pointer]:
+                - img [ref=e74]
+              - button [ref=e77] [cursor=pointer]:
+                - img [ref=e78]
+            - generic [ref=e127]:
+              - button [ref=e128] [cursor=pointer]:
+                - img [ref=e129]
+              - button [ref=e133] [cursor=pointer]:
+                - img [ref=e134]
+            - button [ref=e139] [cursor=pointer]:
+              - img [ref=e140]
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - heading "React Development in 2024" [level=2] [ref=e147]
+              - paragraph [ref=e148]: React continues to evolve with new patterns and best practices. Let's explore the most important patterns you should know for building modern React applications.
+              - paragraph [ref=e149]
+              - heading "1. Server Components" [level=3] [ref=e150]
+              - paragraph [ref=e151]: React Server Components allow you to build components that render on the server, reducing bundle size and improving initial load times.
+              - paragraph [ref=e152]
+              - heading "2. Custom Hooks" [level=3] [ref=e153]
+              - paragraph [ref=e154]: Custom hooks are the building blocks of reusable React logic. They allow you to extract component logic into reusable functions.
+              - paragraph [ref=e155]
+              - heading "3. Context with useReducer" [level=3] [ref=e156]
+              - paragraph [ref=e157]: Combining Context API with useReducer provides a powerful state management solution for complex applications.
+              - paragraph [ref=e158]
+              - heading "4. Error Boundaries" [level=3] [ref=e159]
+              - paragraph [ref=e160]: Error boundaries catch JavaScript errors in component trees and display fallback UI instead of crashing the entire app.
+              - paragraph [ref=e161]
+              - heading "Best Practices" [level=3] [ref=e162]
+              - list [ref=e163]:
+                - listitem [ref=e164]: • Keep components small and focused
+                - listitem [ref=e165]: • Use TypeScript for type safety
+                - listitem [ref=e166]: • Implement proper error handling
+                - listitem [ref=e167]: • Optimize performance with React.memo and useMemo
+            - text: "Visit URL: EditRemove"
+      - generic [ref=e168]:
+        - generic [ref=e169]: Category
+        - generic [ref=e170]:
+          - combobox [ref=e171] [cursor=pointer]: Web Development
+          - textbox: Web Development
+          - img
+          - group:
+            - generic: Category *
+      - generic [ref=e172]:
+        - generic [ref=e173]: Tags
+        - generic [ref=e174]:
+          - combobox [ref=e175] [cursor=pointer]:
+            - generic [ref=e176]:
+              - generic [ref=e178]: React
+              - generic [ref=e180]: JavaScript
+              - generic [ref=e182]: Tutorial
+          - textbox: React,JavaScript,Tutorial
+          - img
+          - group:
+            - generic: Tags
+      - generic [ref=e183]:
+        - heading "Status" [level=6] [ref=e184]
+        - group "blog status" [ref=e185]:
+          - button "draft" [ref=e186] [cursor=pointer]: Draft
+          - button "published" [pressed] [ref=e187] [cursor=pointer]: Published
+      - generic [ref=e188]:
+        - button "Cancel" [ref=e189] [cursor=pointer]: Cancel
+        - button "Save" [ref=e190] [cursor=pointer]:
+          - img [ref=e192]
+          - text: Save
+```
