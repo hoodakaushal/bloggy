@@ -29,12 +29,12 @@
     - generic [ref=e28]:
       - generic [ref=e29]:
         - img [ref=e30]
-        - paragraph [ref=e32]: 272 views
+        - paragraph [ref=e32]: 131 views
       - generic [ref=e33]:
         - button [ref=e34] [cursor=pointer]:
           - img [ref=e35]
-        - paragraph [ref=e37]: 95 likes
-    - generic [ref=e38]: Published on December 15, 2025 at 03:05 PM
+        - paragraph [ref=e37]: 17 likes
+    - generic [ref=e38]: Published on December 15, 2025 at 04:58 PM
     - separator [ref=e39]
     - generic [ref=e40]:
       - heading "Introduction to TypeScript" [level=2] [ref=e41]
@@ -60,7 +60,7 @@
       - heading "Conclusion" [level=3] [ref=e57]
       - paragraph [ref=e58]: TypeScript is a powerful tool that can significantly improve your development experience. Start small by adding it to a new project and gradually adopt more features as you become comfortable.
     - separator [ref=e59]
-    - heading "Comments (4)" [level=5] [ref=e60]
+    - heading "Comments (2)" [level=5] [ref=e60]
     - generic [ref=e62]:
       - generic [ref=e63]:
         - generic:
@@ -84,28 +84,16 @@
     - list [ref=e72]:
       - listitem [ref=e73]:
         - generic [ref=e74]:
-          - heading "Grace Wilson" [level=6] [ref=e77]
+          - heading "Bob Smith" [level=6] [ref=e77]
           - paragraph [ref=e78]:
-            - text: I have a question about the third example. Can you clarify?
-            - text: December 15, 2025 at 03:05 PM
+            - text: Thanks for the detailed explanation. This cleared up a lot of confusion.
+            - text: December 15, 2025 at 04:58 PM
       - listitem [ref=e79]:
         - generic [ref=e80]:
-          - heading "Henry Taylor" [level=6] [ref=e83]
-          - paragraph [ref=e84]:
-            - text: Fantastic tutorial! Helped me understand the concept finally.
-            - text: December 15, 2025 at 03:05 PM
-      - listitem [ref=e85]:
-        - generic [ref=e86]:
-          - heading "Emma Davis" [level=6] [ref=e89]
-          - paragraph [ref=e90]:
-            - text: This is exactly what I was looking for. Bookmarked!
-            - text: December 15, 2025 at 03:05 PM
-      - listitem [ref=e91]:
-        - generic [ref=e92]:
-          - generic [ref=e94]:
-            - heading "Admin" [level=6] [ref=e95]
-            - generic [ref=e97]: Author
-          - paragraph [ref=e98]:
+          - generic [ref=e82]:
+            - heading "Admin" [level=6] [ref=e83]
+            - generic [ref=e85]: Author
+          - paragraph [ref=e86]:
             - text: Thank you all for the feedback! I'm glad this was helpful.
-            - text: December 15, 2025 at 03:05 PM
+            - text: December 15, 2025 at 04:58 PM
 ```

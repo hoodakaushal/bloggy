@@ -33,10 +33,10 @@ export async function getTotalComments(page: Page): Promise<number> {
   return count;
 }
 
-export async function setCommentTitle(page: Page, title: string) {
+export async function setCommentUser(page: Page, user: string) {
   // Locate input by type="text" and required attribute
-  const titleInput = page.locator('input[type="text"][required]');
-  await titleInput.fill(title);
+  const userInput = page.locator('input[type="text"][required]');
+  await userInput.fill(user);
 }
 
 export async function setCommentBody(page: Page, body: string) {
@@ -51,12 +51,19 @@ export async function postComment(page: Page) {
 
 export async function validateLatestComment(
     page: Page,
-  expectedTitle: string,
+  expectedUser: string,
   expectedBody: string
 ) {
-await expect(
-  page.getByRole('heading', { name: expectedTitle })
-).toBeVisible();
+
+if (expectedUser === 'admin') {
+    // Custom assertion for admin
+    await assertCommentAdmin(page);
+  } else {
+    // Assert for regular user
+    await expect(
+      page.getByRole('heading', { name: expectedUser })
+    ).toBeVisible();
+  }
 
 await expect(
   page.getByText(expectedBody)
@@ -71,4 +78,24 @@ export async function getViewsCount(page: Page): Promise<number> {
     .textContent();
 
   return Number(viewsText?.match(/\d+/)?.[0]);
+}
+
+export async function assertCommentAdmin(
+  page: Page,
+) {
+  // Locate the comment container by its text
+  const commentItem = page.locator('li', { hasText: 'admin' });
+
+  // Assert author name
+  await expect(
+  commentItem.getByRole('heading', { name: 'admin', exact: true }).first()
+).toBeVisible();
+
+
+// Assert that there are exactly 2 role chips
+await expect(commentItem.locator('.MuiChip-label')).toHaveCount(2);
+
+// Assert the first one has text "Author"
+await expect(commentItem.locator('.MuiChip-label').first()).toHaveText('Author');
+
 }

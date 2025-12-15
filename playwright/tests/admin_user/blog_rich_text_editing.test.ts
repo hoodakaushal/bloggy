@@ -21,7 +21,8 @@ import {
     typeBackgroundColoredTextAndAssert,
     uploadImageToEditorAndAssert,
     insertLinkIntoEditorAndAssert,
-    typeTextWithAllHeadersAndAssert
+    typeTextWithAllHeadersAndAssert,
+    clearFormatting,
 
 } from '../../pages/blogEdit';
 
@@ -225,11 +226,22 @@ test('Test Link Insert', async ({ page }) => {
 
     // Assert link text
     await expect(link).toHaveText('This is a link')
-
 });
 
 
+test('Test Clean Editor ', async ({ page }) => {
+  // Reusable strings
+  page.goto('/admin/blog/1')
 
+ const editor = page.locator('.ql-editor');
+
+// Assert h2 is visible
+const h2 = editor.locator('h2');
+await expect(h2).toBeVisible();
+
+ await clearFormatting(page);
+await expect(h2).not.toBeVisible();
+});
 
 
 });

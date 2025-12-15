@@ -10,7 +10,7 @@ import {
   getLikes,
   clickLike,
   getTotalComments,
-  setCommentTitle,
+  setCommentUser,
   setCommentBody,
   postComment,
   validateLatestComment,
@@ -106,11 +106,20 @@ test('Like on Blogs', async ({ page }) => {
 
     test('Comment on Blogs', async ({ page }) => {
 
+      let user: string;
+
+      if (isAdmin === false) {
+        user = 'Random User';
+      } else {
+        user = 'admin';
+      }
       await page.goto('/blog/1');
 
       const totalComments = await getTotalComments(page);
 
-      await setCommentTitle(page, 'Great Article!');
+      if(isAdmin === false){
+        await setCommentUser(page, user);
+      }
       await setCommentBody(
         page,
         'This tutorial helped me understand TypeScript better.'
@@ -119,7 +128,7 @@ test('Like on Blogs', async ({ page }) => {
 
       await validateLatestComment(
         page,
-        'Great Article!',
+        user,
         'This tutorial helped me understand TypeScript better.'
       );
 
