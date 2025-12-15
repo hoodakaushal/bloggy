@@ -121,8 +121,11 @@ export async function toggleTheme(
   await page.getByTitle(title).click();
 }
 
-
 export async function clickHomeButton(page: Page) {
   await page.getByRole('link', { name: 'Home' }).click();
 }
 
+export async function assertExcerptVisible(page: Page, text: string) {
+  const paragraph = page.locator('p.MuiTypography-paragraph', { hasText: text });
+  await expect(paragraph).toBeVisible();
+}
