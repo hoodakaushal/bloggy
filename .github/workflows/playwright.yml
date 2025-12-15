@@ -39,6 +39,7 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test
+        working-directory: playwright
 
       - name: Upload Playwright Report
         if: always()
