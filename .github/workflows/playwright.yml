@@ -1,0 +1,49 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+
+    env:
+      JWT_SECRET: abc123   # 👈 same as local
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Start app (backend + frontend)
+        run: npm run dev &
+        # 👆 runs in background like locally
+
+      - name: Wait for app to be ready
+        run: npx wait-on http://localhost:5173
+        # adjust port if needed
+
+      - name: Run Playwright tests
+        run: npx playwright test
+        working-directory: playwright
+
+      - name: Upload Playwright Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
