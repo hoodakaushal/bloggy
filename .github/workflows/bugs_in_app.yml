@@ -1,4 +1,4 @@
-name: Playwright Tests For Bloggy
+name: Bugs in App via Playwright
 
 on:
   push:
