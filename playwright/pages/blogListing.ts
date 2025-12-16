@@ -58,7 +58,8 @@ export async function blogActionByTitle(
     await expect(row).toHaveCount(0);
     return;
   }
-  
+  page.waitForLoadState('domcontentloaded')
+
   if (await button.count() === 0) {
   // Button doesn't exist → go to next page
   await goToNextPage(page);

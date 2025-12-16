@@ -527,9 +527,6 @@ Folder: `playwright-report/`
 - **Supporting Data:** `data/` – Raw data used by the HTML report.  
 - **Trace Folder:** `trace/` – Trace files for detailed inspection of test execution.
 
-### 3. Test Setup Logs
-- **Setup Log:** [test setup log](./failure_playwright/test-setup-log.txt) – Terminal output from environment setup and seeding.
-
 ---
 
 ### How to Use
