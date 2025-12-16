@@ -43,7 +43,7 @@
    - [4. Framework & Code Structure](#4-framework--code-structure)
    - [5. CI/CD & Reporting](#5-cicd--reporting)
    - [Summary](#summary)
-5. [CI/CD Setup with GitHub Actions](#ci-cd-setup-with-github-actions)
+5. [CI/CD Setup with GitHub Actions](##cicd-setup-with-github-actions)
    - [Workflow Overview](#workflow-overview)
      - [Job 1: Playwright Tests for Bloggy](#job-1-playwright-tests-for-bloggy)
      - [Job 2: Bugs in App via Playwright](#job-2-bugs-in-app-via-playwright)
