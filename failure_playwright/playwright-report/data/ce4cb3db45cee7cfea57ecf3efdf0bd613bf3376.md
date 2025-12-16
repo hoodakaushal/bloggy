@@ -1,0 +1,105 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Blog App" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "Admin Login" [ref=e8] [cursor=pointer]:
+          - /url: /login
+          - text: Admin Login
+        - button "Switch to dark mode" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - heading "Getting Started with TypeScript" [level=1] [ref=e14]
+      - generic [ref=e15]:
+        - img [ref=e16]
+        - generic [ref=e18]: Live
+    - generic [ref=e19]:
+      - generic [ref=e21]: Programming
+      - generic [ref=e23]: TypeScript
+      - generic [ref=e25]: JavaScript
+      - generic [ref=e27]: Tutorial
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - img [ref=e30]
+        - paragraph [ref=e32]: 240 views
+      - generic [ref=e33]:
+        - button [ref=e34] [cursor=pointer]:
+          - img [ref=e35]
+        - paragraph [ref=e37]: 53 likes
+    - generic [ref=e38]: Published on December 16, 2025 at 08:00 PM
+    - separator [ref=e39]
+    - generic [ref=e40]:
+      - heading "Introduction to TypeScript" [level=2] [ref=e41]
+      - paragraph [ref=e42]: TypeScript has revolutionized the way we write JavaScript by adding static typing to the language. In this comprehensive guide, we'll explore the key features that make TypeScript essential for modern web development.
+      - heading "Why TypeScript?" [level=3] [ref=e43]
+      - list [ref=e44]:
+        - listitem [ref=e45]:
+          - strong [ref=e46]: "Type Safety:"
+          - text: Catch errors at compile time rather than runtime
+        - listitem [ref=e47]:
+          - strong [ref=e48]: "Better IDE Support:"
+          - text: Enhanced autocomplete and intelligent code suggestions
+        - listitem [ref=e49]:
+          - strong [ref=e50]: "Improved Code Quality:"
+          - text: Self-documenting code with explicit types
+        - listitem [ref=e51]:
+          - strong [ref=e52]: "Easier Refactoring:"
+          - text: Confidently make changes with compiler support
+      - heading "Basic Types" [level=3] [ref=e53]
+      - paragraph [ref=e54]: TypeScript provides several basic types including string, number, boolean, array, tuple, enum, and more.
+      - heading "Interfaces and Type Aliases" [level=3] [ref=e55]
+      - paragraph [ref=e56]: Interfaces and type aliases allow you to define custom types that describe the shape of objects.
+      - heading "Conclusion" [level=3] [ref=e57]
+      - paragraph [ref=e58]: TypeScript is a powerful tool that can significantly improve your development experience. Start small by adding it to a new project and gradually adopt more features as you become comfortable.
+    - separator [ref=e59]
+    - heading "Comments (3)" [level=5] [ref=e60]
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - generic:
+          - text: Your Name
+          - generic: "*"
+        - generic [ref=e64]:
+          - textbox "Your Name" [ref=e65]
+          - group:
+            - generic: Your Name *
+        - paragraph [ref=e66]: Enter your name to post a comment
+      - generic [ref=e67]:
+        - generic:
+          - text: Your Comment
+          - generic: "*"
+        - generic [ref=e68]:
+          - textbox "Your Comment" [ref=e69]
+          - group:
+            - generic: Your Comment *
+        - paragraph [ref=e70]: 0/2000 characters
+      - button "Post Comment" [ref=e71] [cursor=pointer]: Post Comment
+    - list [ref=e72]:
+      - listitem [ref=e73]:
+        - generic [ref=e74]:
+          - heading "Alice Johnson" [level=6] [ref=e77]
+          - paragraph [ref=e78]:
+            - text: Great article! Very helpful for beginners.
+            - text: December 16, 2025 at 08:00 PM
+      - listitem [ref=e79]:
+        - generic [ref=e80]:
+          - heading "Henry Taylor" [level=6] [ref=e83]
+          - paragraph [ref=e84]:
+            - text: Fantastic tutorial! Helped me understand the concept finally.
+            - text: December 16, 2025 at 08:00 PM
+      - listitem [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e88]:
+            - heading "Admin" [level=6] [ref=e89]
+            - generic [ref=e91]: Author
+          - paragraph [ref=e92]:
+            - text: Thank you all for the feedback! I'm glad this was helpful.
+            - text: December 16, 2025 at 08:00 PM
+```
