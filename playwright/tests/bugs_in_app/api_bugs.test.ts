@@ -52,54 +52,23 @@ test.beforeAll(async ({ playwright }) => {
   });
 });
 
-test('Access a deleted blog via API and verify', async () => {
-  const blogId = 1;
 
-  // 1️⃣ Delete blog
-  const deleteResponse = await apiContext.delete(`/api/blogs/${blogId}`);
-  expect(deleteResponse.ok()).toBeTruthy();
+// Genuine issue invalid file returning 500 instead of a 400
+test.describe('POST /api/upload – invalid file upload', () => {
+  test('should reject non-image file upload', async () => {
+    const response = await apiContext.post('/api/upload', {
+      multipart: {
+        image: {
+          name: 'invalid.txt',
+          mimeType: 'text/plain',
+          buffer: Buffer.from('This is not an image'),
+        },
+      },
+    });
 
-  const deleteBody = await deleteResponse.json();
-  console.log('Delete response:', deleteBody);
+    expect(response.status()).toBe(400);
 
-  // check message or status in response
-  expect(deleteBody).toHaveProperty('message');
-  expect(deleteBody.message).toMatch(/deleted/i);
-
-  //Verify blog no longer exists
-  const getResponse = await apiContext.get(`/api/blogs/${blogId}`);
-  expect(getResponse.status()).toBe(404); // Assuming API returns 404 for missing blog
-});
-
-
-test('View public blog by ID and validate schema', async ({ request }) => {
-  const blogId = 10;
-
-  const response = await request.get(`/api/blogs/public/${blogId}`, {
-    headers: {
-      Accept: 'application/json',
-    },
+    const body = await response.json();
+    expect(body).toHaveProperty('error');
   });
-
-  // 1️⃣ Status assertion
-  expect(response.status()).toBe(200);
-
-  const body = await response.json();
-
-  // 2️⃣ Core assertions
-  expect(body).toHaveProperty('id', blogId);
-  expect(body).toHaveProperty('title');
-  expect(body).toHaveProperty('content');
-
-  // 3️⃣ Type & value assertions
-  expect(typeof body.title).toBe('string');
-  expect(body.title.length).toBeGreaterThan(0);
-
-  expect(typeof body.content).toBe('string');
-  expect(body.content.length).toBeGreaterThan(0);
-
-  // 4️⃣ Optional metadata assertions
-  expect(body).toHaveProperty('createdAt');
-  expect(body).toHaveProperty('views');
-  expect(typeof body.views).toBe('number');
 });

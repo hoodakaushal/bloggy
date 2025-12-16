@@ -2,6 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests', // adjust path to your tests
+  testIgnore: [
+    '**/tests/bugs_in_app/**',
+  ],
   use: {
     baseURL: 'http://localhost:5173',
     

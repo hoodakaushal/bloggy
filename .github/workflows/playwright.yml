@@ -37,7 +37,7 @@ jobs:
 
       - name: Wait for frontend
         run: npx wait-on http://localhost:5173
-        
+
       - name: Install Playwright deps
         run: npm ci
         working-directory: playwright
@@ -50,6 +50,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-artifacts
+          name: playwright-artifacts-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             playwright/test-results
+            playwright/test-setup.log
