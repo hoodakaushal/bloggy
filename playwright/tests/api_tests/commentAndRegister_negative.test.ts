@@ -45,7 +45,7 @@ test.beforeAll(async ({ playwright }) => {
 
   // Create API context with Authorization header
   apiContext = await playwright.request.newContext({
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://localhost:3001',
     extraHTTPHeaders: {
       'Accept': 'application/json',
       'Authorization': `Bearer ${token}`,

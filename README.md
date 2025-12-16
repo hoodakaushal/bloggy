@@ -42,8 +42,18 @@
    - [3. Test Data Management](#3-test-data-management)
    - [4. Framework & Code Structure](#4-framework--code-structure)
    - [5. CI/CD & Reporting](#5-cicd--reporting)
-5. [Summary](#summary)
-
+   - [Summary](#summary)
+5. [CI/CD Setup with GitHub Actions](#ci-cd-setup-with-github-actions)
+   - [Workflow Overview](#workflow-overview)
+     - [Job 1: Playwright Tests for Bloggy](#job-1-playwright-tests-for-bloggy)
+     - [Job 2: Bugs in App via Playwright](#job-2-bugs-in-app-via-playwright)
+   - [Key Notes](#key-notes)
+6. [Assumptions & Notes](#assumptions--notes)
+   - [1. Environment Assumptions](#1-environment-assumptions)
+   - [2. Test Assumptions](#2-test-assumptions)
+   - [3. CI/CD Assumptions](#3-cicd-assumptions)
+   - [4. Notes for Developers & Testers](#4-notes-for-developers--testers)
+   - [5. General Assumption](#5-general-assumption)
 
 # Automation Framework Choice: Playwright
 
@@ -450,3 +460,88 @@ The following optimizations were identified to improve **test performance, stabi
 
 ## Summary
 These optimizations focus on **faster feedback, reduced flakiness, and long-term scalability**, ensuring the test suite remains reliable as the application grows.
+
+
+# CI/CD Setup with GitHub Actions
+
+This project uses **GitHub Actions** to automate Playwright test execution for the Bloggy app. The workflow is split into two jobs: one for running all standard tests, and another for running tests tagged as bugs in the application.
+
+---
+
+## Workflow Overview
+
+### Job 1: [Playwright Tests for Bloggy](https://github.com/ojasrahate/bloggy/actions/workflows/playwright.yml)
+- Runs all standard Playwright tests **excluding tests tagged as `@bugs`**.
+- Ensures core functionality and regression checks are validated for every push or pull request.
+- Executes with a single worker to maintain database isolation and reproducibility.
+- Ideal for CI/CD pipelines to ensure that main features remain stable.
+
+### Job 2: [Bugs in App via Playwright](https://github.com/ojasrahate/bloggy/actions/workflows/bugs_in_app.yml)
+- Runs **only the tests tagged with `@bugs`**, which are known issues in the app.
+- Helps track failing scenarios separately without affecting the main test suite.
+- Also executes with a single worker for consistent test isolation.
+- Useful for monitoring known issues over time and verifying bug fixes.
+
+---
+
+## Key Notes
+
+1. **Separation of Jobs**  
+   Splitting regular tests and bug-specific tests provides clearer reporting and prevents flaky bug tests from impacting the main CI/CD pipeline.
+
+2. **Test Tagging**  
+   - `@bugs` — used to identify tests covering known bugs.  
+   - Tests without this tag are part of the main Playwright test suite.
+
+4. **Purpose**  
+   This CI/CD setup ensures both **stable feature validation** and **tracking of known bugs**, maintaining high confidence in production readiness.
+
+
+# Assumptions & Notes
+
+This section captures key assumptions made during the creation of the automation framework, test suites, and CI/CD setup, as well as notes to guide future developers and testers.
+
+---
+
+## 1. Environment Assumptions
+
+- **Node.js Version:** Node.js v18 is assumed to be installed and used for both local development and CI/CD pipelines.
+- **Project Structure:** The repository has two `package.json` files — one in the root (`bloggy/`) and one in `bloggy/playwright/`.
+- **Database State:** Each test file resets and seeds the database. This ensures test isolation but assumes that the seed scripts are reliable and deterministic.
+- **Browsers:** Playwright-installed browsers (Chromium, Firefox, WebKit) are assumed to be available for testing.
+- **Ports & URLs:** Frontend is expected to run on `http://localhost:5173`. Backend is expected to run on `http://localhost:3001`.Tests may fail if the port or base URL is different.
+
+---
+
+## 2. Test Assumptions
+
+- **Single Worker Execution:** All tests run with one worker to prevent conflicts and maintain database isolation.
+- **Tags:** Tests use the `@bugs` tag to isolate known failing scenarios. Tests without this tag are assumed to be stable.
+- **Data Dependencies:** Tests assume that data created during setup (via seed scripts) is valid and complete.
+- **Test Coverage Scope:**  
+  - Core CRUD operations, authentication, API validations, and UI flows are covered.  
+  - Edge cases and negative flows beyond core features may not be fully implemented.
+
+---
+
+## 3. CI/CD Assumptions
+
+- **GitHub Actions:** The CI/CD workflow assumes the repository is hosted on GitHub with Actions enabled.
+- **Job Separation:** Regular tests and bug-specific tests run in separate jobs to avoid failing the main suite due to known bugs.
+- **Worker Isolation:** Each job assumes a clean environment with no shared database state.
+
+---
+
+## 4. Notes for Developers & Testers
+
+- **Extending Tests:** Future enhancements (e.g., unsupported media uploads, cross-browser device testing) can be added without changing the core workflow.
+- **Environment Variables:** If additional environment variables are required (API keys, secrets), they should be stored in GitHub Secrets or `.env` files.
+- **Debugging CI Failures:** Logs are available in GitHub Actions and can be used with Playwright trace viewers, screenshots, and videos.
+- **Maintaining Test Data:** Avoid hard-coding IDs or data; always use the seeding mechanism for reliable test execution.
+- **Documentation Updates:** Any new workflow, tag, or major change in the app should be reflected in this MD file to keep the guide accurate.
+
+---
+
+## 5. General Assumption
+
+The current setup prioritizes **stability, isolation, and reproducibility** over execution speed. Parallelization or aggressive optimizations should only be applied once database isolation and test reliability are fully ensured.

@@ -22,7 +22,7 @@ test.beforeAll(async ({ playwright }) => {
          });
   // Temporary context to call login
   const tempContext = await playwright.request.newContext({
-    baseURL: 'http://localhost:5173',
+    baseURL: 'http://localhost:3001',
   });
 
   // Login with correct payload
