@@ -1,5 +1,6 @@
 # Table of Contents
-
+## Walkthrough Video
+[Click here to download walkthrough video](./walkthrough_video.mov)
 1. [Automation Framework Choice: Playwright](#automation-framework-choice-playwright)
    - [Overview](#overview)
    - [Why Playwright](#why-playwright)
