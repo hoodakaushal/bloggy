@@ -2,9 +2,6 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests', // adjust path to your tests
-  testIgnore: [
-    '**/tests/bugs_in_app/**',
-  ],
   use: {
     baseURL: 'http://localhost:5173',
     
@@ -13,8 +10,9 @@ export default defineConfig({
 
     // Keep traces for failed tests
     trace: 'retain-on-failure',
-
-    // Optional: slow down actions for debugging
-    // actionTimeout: 5000,
   },
+  reporter: [
+    ['list'], // console output
+    ['html', { open: 'never' }] // generate HTML report, don't open automatically
+  ],
 });

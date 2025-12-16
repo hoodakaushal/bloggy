@@ -59,7 +59,13 @@ test.describe('Admin User x Blog Listing: Can', () => {
         await blogActionByTitle(page, 'Microservices Architecture Explained', 'Edit');
     });
 
-    test('delete a blog', async ({ page }) => {
+    test('delete a blogs and check pagination reduces automatically', async ({ page }) => {
         await blogActionByTitle(page, 'Getting Started with TypeScript', 'Delete');
+        await blogActionByTitle(page, 'CSS Grid vs Flexbox: When to Use Which', 'Delete');
+         await expect(
+            page.locator('button[aria-label="Go to page 2"]')
+          ).not.toBeVisible();
+        await expect(getNextButton(page)).not.toBeVisible();
+        await expect(getPreviousButton(page)).not.toBeVisible();
     });
 });

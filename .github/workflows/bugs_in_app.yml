@@ -42,8 +42,8 @@ jobs:
         run: npm ci
         working-directory: playwright
 
-      - name: Run Playwright tests
-        run: npx playwright test --grep-invert @bugs --workers=1
+      - name: Genuine Bug Playwright Fails
+        run: npx playwright test --grep @bugs --workers=1
         working-directory: playwright
 
       - name: Upload Playwright artifacts

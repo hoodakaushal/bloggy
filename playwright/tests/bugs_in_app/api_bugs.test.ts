@@ -55,7 +55,7 @@ test.beforeAll(async ({ playwright }) => {
 
 // Genuine issue invalid file returning 500 instead of a 400
 test.describe('POST /api/upload – invalid file upload', () => {
-  test('should reject non-image file upload', async () => {
+  test('should reject non-image file upload @bugs', async () => {
     const response = await apiContext.post('/api/upload', {
       multipart: {
         image: {

@@ -28,7 +28,7 @@ test.beforeAll(() => {
         });
 });
 
-test.describe('Admin User x Edit Blog: Can', () => {
+test.describe('Admin User x Edit Blog: Can @bugs', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
@@ -54,7 +54,7 @@ test.describe('Admin User x Edit Blog: Can', () => {
 
 });
 
-test.describe('Admin User x Blog View: Can', () => {
+test.describe('Admin User x Blog View: Can @bugs', () => {
 
      // Actual bug: Views update by 2 instead of 1
 test('View count is updated by 1 on refresh or changing urls', async ({ page }) => {
