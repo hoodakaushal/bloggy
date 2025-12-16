@@ -518,7 +518,7 @@ Folder: `test-results/`
 
 - **Trace File:** [trace.zip](./failure_playwright/test-results/bugs_in_app-fe_bugs-Admin--53294-on-refresh-or-changing-urls/trace.zip) – Contains Playwright trace for debugging failed tests.  
 - **Screenshots:** [Screenshot folder](./failure_playwright/test-results/bugs_in_app-fe_bugs-Admin--53294-on-refresh-or-changing-urls/test-failed-1.png) – Screenshots captured during test failures.  
-- **Error Logs:** [Error.md](./failure_playwright/test-results/bugs_in_app-fe_bugs-Admin--53294-on-refresh-or-changing-urls/Error.md) – Consolidated error logs from the test run.
+- **Error Logs:** [Error.md](./failure_playwright/test-results/bugs_in_app-fe_bugs-Admin--53294-on-refresh-or-changing-urls/error-context.md) – Consolidated error logs from the test run.
 
 ### 2. Playwright Report
 Folder: `playwright-report/`
