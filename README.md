@@ -79,6 +79,7 @@ Playwright offers a strong balance of **speed, stability, and developer producti
 # Local Installation & Setup Guide
 
 This document explains how to set up and run the project **locally** using terminal commands. These steps mirror what happens in CI but are written for local development and testing.
+PS: We are assuming root for each command i.e bloggy/
 
 ---
 
@@ -172,6 +173,20 @@ cd playwright
 npx playwright test --grep @bugs --workers=1
 ```
 
+---
+### FAQs
+
+1. Why only one worker?
+> In each test file we are resetting and seeding new data this leads to inconsistent database state and impacts test isolation
+
+2. How to make it faster?
+> Run it across multiple nodes so each node will have it's own app running an each node is isolated
+
+3. Why are we running tests inside bloggy/playwright and not root i.e bloggy/
+> There are two package.json files one inside bloggy/ other inside playwright/. We could have merged it and would have been able to run on root but then app would have been heavier. Whereas by this setup we achieve Cleaner Dependency management, App and Tests are independent.
+
+4. Why are we using tags like @bugs?
+> We found some genuine bugs in the app so we use tags to isolate runs which have/don't have bugs
 ---
 
 # Test Coverage Summary
