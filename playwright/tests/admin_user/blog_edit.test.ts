@@ -1,14 +1,12 @@
 import { test, expect } from '@playwright/test';
-
 import {
     fillBlogForm,
     uploadImageViaClick,
     assertImageLoaded
 } from '../../pages/blogEdit';
-
+import fs from 'fs';
 import {
     getBlogRowByTitle,
-    blogActionByTitle
 } from '../../pages/blogListing';
 
 import {
@@ -18,7 +16,6 @@ import {
 import { execSync } from 'child_process';
 import path from 'path';
 import { loginAdmin } from '../../pages/loginPage';
-import { fuzzyClass } from '../../utils/helper';
 
 const rootDir = path.resolve(__dirname, '../../..');
 

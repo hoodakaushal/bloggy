@@ -1,6 +1,8 @@
 import { test, expect, request, APIRequestContext } from '@playwright/test';
 import { execSync } from 'child_process';
 import path from 'path';
+import fs from 'fs';
+
 const rootDir = path.resolve(__dirname, '../../..');
 let apiContext: APIRequestContext;
 
@@ -77,11 +79,6 @@ test('Add a comment via API with wrong authorization should fail', async ({ requ
   expect(body.error.toLowerCase()).toMatch(
     /unauthorized|invalid|token|expired/
   );
-
-  console.log('API correctly rejected comment with wrong auth:', {
-    status: response.status(),
-    body,
-  });
 });
 
 test('Public comment fails with missing content (no auth)', async ({ request }) => {
@@ -134,8 +131,6 @@ test('Add a comment via API exceeding max length should fail', async () => {
   const body = await response.json();
   expect(body).toHaveProperty('error');
   expect(body.error).toBe('Comment cannot exceed 2000 characters');
-
-  console.log('API correctly rejected comment exceeding max length:', body);
 });
 
 

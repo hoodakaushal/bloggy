@@ -1,6 +1,8 @@
 import { test, expect, request, APIRequestContext } from '@playwright/test';
 import { execSync } from 'child_process';
 import path from 'path';
+import fs from 'fs';
+
 const rootDir = path.resolve(__dirname, '../../..');
 let apiContext: APIRequestContext;
 

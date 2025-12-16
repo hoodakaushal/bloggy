@@ -8,6 +8,7 @@ import { execSync } from 'child_process';
 import path from 'path';
 import { loginAdmin } from '../../pages/loginPage';
 import { fuzzyClass } from '../../utils/helper';
+import fs from 'fs';
 
 const rootDir = path.resolve(__dirname, '../../..');
 

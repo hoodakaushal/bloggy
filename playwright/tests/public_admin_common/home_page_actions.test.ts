@@ -15,6 +15,7 @@ import {
 import { loginAdmin } from '../../pages/loginPage';
 import { execSync } from 'child_process';
 import path from 'path';
+import fs from 'fs';
 
 type UserScenario = {
   title: string;

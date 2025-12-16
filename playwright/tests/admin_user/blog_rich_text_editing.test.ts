@@ -1,11 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 import {
-    fillBlogForm,
-    selectTags,
     selectCategory,
-    uploadImageViaClick,
-    assertImageLoaded,
     typeBoldTextAndAssert,
     typeItalicTextAndAssert,
     typeUnderlineTextAndAssert,
@@ -13,8 +9,6 @@ import {
     clickSaveButton,
     fillTitle,
     fillDescription,
-    typeOrderedList,
-    typeBulletList,
     typeBulletListAndAssert,
     typeOrderedListAndAssert,
     typeColoredTexttAndAssert,
@@ -25,7 +19,7 @@ import {
     clearFormatting,
 
 } from '../../pages/blogEdit';
-
+import fs from 'fs';
 import {
     blogActionByTitle,
     clickNewBlogPost
@@ -38,8 +32,18 @@ const rootDir = path.resolve(__dirname, '../../..');
 
 // 🔹 Reset + seed ONCE
 test.beforeAll(() => {
-  execSync('npm run reset --workspace=server', { stdio: 'inherit', cwd: rootDir });
-  execSync('npm run seed --workspace=server', { stdio: 'inherit', cwd: rootDir });
+          const logFile = path.join(process.cwd(), 'test-setup.log');
+    
+          const logStream = fs.openSync(logFile, 'a');
+          execSync('npm run reset --workspace=server', {
+            cwd: rootDir,
+            stdio: ['ignore', logStream, logStream], // stdin, stdout, stderr
+          });
+    
+          execSync('npm run seed --workspace=server', {
+            cwd: rootDir,
+            stdio: ['ignore', logStream, logStream],
+          });
 });
 
 test.describe('Admin User x Create Blog:', () => {
