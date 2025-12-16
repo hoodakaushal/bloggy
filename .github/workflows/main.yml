@@ -1,0 +1,57 @@
+name: Playwright Tests
+
+push:
+    branches:
+      - "**"
+on:
+  workflow_dispatch:
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      JWT_SECRET: abc123
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Reset & seed database
+        run: |
+          npm run reset --workspace=server
+          npm run seed --workspace=server
+
+      - name: Start backend & frontend
+        run: |
+          npm run dev > app.log 2>&1 &
+          echo "App started"
+
+      - name: Wait for frontend
+        run: npx wait-on http://localhost:5173
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Upload Playwright artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            playwright-report
+            test-results
+            app.log
