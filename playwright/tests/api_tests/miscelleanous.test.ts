@@ -60,7 +60,6 @@ test('Access a deleted blog via API and verify', async () => {
   expect(deleteResponse.ok()).toBeTruthy();
 
   const deleteBody = await deleteResponse.json();
-  console.log('Delete response:', deleteBody);
 
   // check message or status in response
   expect(deleteBody).toHaveProperty('message');

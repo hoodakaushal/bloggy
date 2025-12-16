@@ -1,6 +1,8 @@
 import { Page, expect } from '@playwright/test';
 import { fuzzyClass } from '../utils/helper';
 import path from 'path';
+import os from 'os';
+
 
 const EDITOR_SELECTOR = '.ql-editor';
 
@@ -25,9 +27,11 @@ export async function fillContentEditor(page: Page, content: string) {
   const editor = page.locator(EDITOR_SELECTOR);
   await editor.click();
 
+
+  const isMac = os.platform() === 'darwin';
+  const modifierKey = isMac ? 'Meta' : 'Control';
   // Use keyboard since fill() doesn't work for contenteditable
-  await page.keyboard.press('Meta+A'); // Mac
-  // await page.keyboard.press('Control+A'); // Windows/Linux
+  await page.keyboard.press(`${modifierKey}+A`);
   await page.keyboard.press('Backspace');
   await page.keyboard.type(content);
 
