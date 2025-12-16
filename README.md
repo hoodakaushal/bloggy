@@ -507,7 +507,7 @@ This project uses **GitHub Actions** to automate Playwright test execution for t
 We can find test reports in artifacts of the above CI/CD Runs.I am attaching two artifacts below
 Successful Run Artifact: We can Fetch this from https://github.com/ojasrahate/bloggy/actions/workflows/bugs_in_app.yml from the latest run under artifacts
 Failure Run Artifact:  We can Fetch this from https://github.com/ojasrahate/bloggy/actions/workflows/bugs_in_app.yml from the latest run under artifacts
-- **Successful Run Artifact**: [Download here](./successful_playwright.zip)
+- **Successful Run Artifact**: [Download here](./success_playwright.zip)
 - **Failure Run Artifact**: [Download here](./failure_playwright.zip)
 
 
