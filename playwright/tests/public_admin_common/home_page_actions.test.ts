@@ -30,8 +30,18 @@ const rootDir = path.resolve(__dirname, '../../..');
 
 /* 🔹 Reset + seed ONCE */
 test.beforeAll(() => {
-  execSync('npm run reset --workspace=server', { stdio: 'inherit', cwd: rootDir });
-  execSync('npm run seed --workspace=server', { stdio: 'inherit', cwd: rootDir });
+        const logFile = path.join(process.cwd(), 'test-setup.log');
+  
+        const logStream = fs.openSync(logFile, 'a');
+        execSync('npm run reset --workspace=server', {
+          cwd: rootDir,
+          stdio: ['ignore', logStream, logStream], // stdin, stdout, stderr
+        });
+  
+        execSync('npm run seed --workspace=server', {
+          cwd: rootDir,
+          stdio: ['ignore', logStream, logStream],
+        });
 });
 
 /* 🔁 Run same suite for both users */

@@ -1,20 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { getViewsCount } from '../../pages/blogDetails';
 import {
-    fillBlogForm,
     uploadImageViaClick,
     assertImageLoaded
 } from '../../pages/blogEdit';
-
-import {
-    getBlogRowByTitle,
-    blogActionByTitle
-} from '../../pages/blogListing';
-
-import {
-    assertExcerptVisible,
-    clickReadMoreForBlog
-} from '../../pages/homePage'
 import { execSync } from 'child_process';
 import path from 'path';
 import { loginAdmin } from '../../pages/loginPage';
@@ -24,8 +13,18 @@ const rootDir = path.resolve(__dirname, '../../..');
 
 // 🔹 Reset + seed ONCE
 test.beforeAll(() => {
-  execSync('npm run reset --workspace=server', { stdio: 'inherit', cwd: rootDir });
-  execSync('npm run seed --workspace=server', { stdio: 'inherit', cwd: rootDir });
+        const logFile = path.join(process.cwd(), 'test-setup.log');
+  
+        const logStream = fs.openSync(logFile, 'a');
+        execSync('npm run reset --workspace=server', {
+          cwd: rootDir,
+          stdio: ['ignore', logStream, logStream], // stdin, stdout, stderr
+        });
+  
+        execSync('npm run seed --workspace=server', {
+          cwd: rootDir,
+          stdio: ['ignore', logStream, logStream],
+        });
 });
 
 test.describe('Admin User x Edit Blog: Can', () => {
