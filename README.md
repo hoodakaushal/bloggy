@@ -1,6 +1,8 @@
 # Table of Contents
+
 ## Walkthrough Video
 [Click here to download walkthrough video](./walkthrough_video.mov)
+
 1. [Automation Framework Choice: Playwright](#automation-framework-choice-playwright)
    - [Overview](#overview)
    - [Why Playwright](#why-playwright)
@@ -9,52 +11,54 @@
    - [Why Playwright Is Better Than Selenium](#why-playwright-is-better-than-selenium)
    - [Conclusion](#conclusion)
 2. [Local Installation & Setup Guide](#local-installation--setup-guide)
-   - [1. Install Node.js (v18)](#1-install-nodejs-v18)
-   - [2. Install Project Dependencies](#2-install-project-dependencies)
-   - [3. Install Playwright Browsers](#3-install-playwright-browsers)
-   - [4. Start Backend & Frontend](#4-start-backend--frontend)
-   - [5. Wait for Frontend to Be Ready](#5-wait-for-frontend-to-be-ready)
-   - [6. Install Playwright Test Dependencies](#6-install-playwright-test-dependencies)
-   - [7. Run Playwright for All Tests(Excluding Genuine Bugs)](#7-run-playwright-for-all-testsexcluding-genuine-bugs)
-   - [8. Run Playwright for Bugs in App(We expect these to fail)](#8-run-playwright-for-bugs-in-appwe-expect-these-to-fail)
+   - [Install Node.js (v18)](#install-nodejs-v18)
+   - [Install Project Dependencies](#install-project-dependencies)
+   - [Install Playwright Browsers](#install-playwright-browsers)
+   - [Start Backend & Frontend](#start-backend--frontend)
+   - [Wait for Frontend to Be Ready](#wait-for-frontend-to-be-ready)
+   - [Install Playwright Test Dependencies](#install-playwright-test-dependencies)
+   - [Run Playwright for All Tests (Excluding Genuine Bugs)](#run-playwright-for-all-tests-excluding-genuine-bugs)
+   - [Run Playwright for Bugs in App (We expect these to fail)](#run-playwright-for-bugs-in-app-we-expect-these-to-fail)
    - [FAQs](#faqs)
 3. [Test Coverage Summary](#test-coverage-summary)
    - [Overview](#overview-1)
    - [Coverage Breakdown](#coverage-breakdown)
-     - [1. Admin User – Blog Management (UI)](#1-admin-user--blog-management-ui)
-     - [2. Authentication & Authorization](#2-authentication--authorization)
-     - [3. API Testing](#3-api-testing)
-     - [4. Public & Admin Shared User Flows (UI)](#4-public--admin-shared-user-flows-ui)
-     - [5. User Registration (UI)](#5-user-registration-ui)
+     - [Admin User – Blog Management (UI)](#admin-user--blog-management-ui)
+     - [Authentication & Authorization](#authentication--authorization)
+     - [API Testing](#api-testing)
+     - [Public & Admin Shared User Flows (UI)](#public--admin-shared-user-flows-ui)
+     - [User Registration (UI)](#user-registration-ui)
    - [Test Coverage Summary (High Level)](#test-coverage-summary-high-level)
    - [Identified Gaps / Future Enhancements](#identified-gaps--future-enhancements)
    - [Additional Test Scenarios (Not Implemented Due to Time Constraints)](#additional-test-scenarios-not-implemented-due-to-time-constraints)
-     - [1. Blog Media Handling](#1-blog-media-handling)
-     - [2. Blog Draft Management Edge Cases](#2-blog-draft-management-edge-cases)
-     - [3. Security & Authorization](#3-security--authorization)
-     - [4. Blog Publish/Unpublish Workflow](#4-blog-publishunpublish-workflow)
-     - [6. Cross-Browser & Device Coverage](#6-cross-browser--device-coverage)
-     - [7. Negative & Edge UI Scenarios](#7-negative--edge-ui-scenarios)
-     - [7. Empty States/Validations Across Apps](#7-empty-statesvalidations-across-apps)
+     - [Blog Media Handling](#blog-media-handling)
+     - [Blog Draft Management Edge Cases](#blog-draft-management-edge-cases)
+     - [Security & Authorization](#security--authorization)
+     - [Blog Publish/Unpublish Workflow](#blog-publishunpublish-workflow)
+     - [Cross-Browser & Device Coverage](#cross-browser--device-coverage)
+     - [Negative & Edge UI Scenarios](#negative--edge-ui-scenarios)
+     - [Empty States/Validations Across Apps](#empty-statesvalidations-across-apps)
    - [Note](#note)
 4. [Possible Optimizations & Improvements](#possible-optimizations--improvements)
-   - [1. Test Execution Performance](#1-test-execution-performance)
-   - [2. Test Stability & Flakiness Reduction](#2-test-stability--flakiness-reduction)
-   - [3. Test Data Management](#3-test-data-management)
-   - [4. Framework & Code Structure](#4-framework--code-structure)
-   - [5. CI/CD & Reporting](#5-cicd--reporting)
+   - [Test Execution Performance](#test-execution-performance)
+   - [Test Stability & Flakiness Reduction](#test-stability--flakiness-reduction)
+   - [Test Data Management](#test-data-management)
+   - [Framework & Code Structure](#framework--code-structure)
+   - [CI/CD & Reporting](#cicd--reporting)
    - [Summary](#summary)
-5. [CI/CD Setup with GitHub Actions](##cicd-setup-with-github-actions)
+5. [CI/CD Setup with GitHub Actions](#cicd-setup-with-github-actions)
    - [Workflow Overview](#workflow-overview)
      - [Job 1: Playwright Tests for Bloggy](#job-1-playwright-tests-for-bloggy)
      - [Job 2: Bugs in App via Playwright](#job-2-bugs-in-app-via-playwright)
    - [Key Notes](#key-notes)
-6. [Assumptions & Notes](#assumptions--notes)
-   - [1. Environment Assumptions](#1-environment-assumptions)
-   - [2. Test Assumptions](#2-test-assumptions)
-   - [3. CI/CD Assumptions](#3-cicd-assumptions)
-   - [4. Notes for Developers & Testers](#4-notes-for-developers--testers)
-   - [5. General Assumption](#5-general-assumption)
+6. [Test Artifacts & Reports](#test-artifacts--reports)
+7. [Assumptions & Notes](#assumptions--notes)
+   - [Environment Assumptions](#environment-assumptions)
+   - [Test Assumptions](#test-assumptions)
+   - [CI/CD Assumptions](#cicd-assumptions)
+   - [Notes for Developers & Testers](#notes-for-developers--testers)
+   - [General Assumption](#general-assumption)
+
 
 # Automation Framework Choice: Playwright
 
@@ -498,9 +502,41 @@ This project uses **GitHub Actions** to automate Playwright test execution for t
    This CI/CD setup ensures both **stable feature validation** and **tracking of known bugs**, maintaining high confidence in production readiness.
 
 
-# Assumptions & Notes
+## Test Artifacts & Reports
 
-This section captures key assumptions made during the creation of the automation framework, test suites, and CI/CD setup, as well as notes to guide future developers and testers.
+We can find test reports in artifacts of the above CI/CD Runs.I am attaching two artifacts below
+Successful Run Artifact: We can Fetch this from https://github.com/ojasrahate/bloggy/actions/workflows/bugs_in_app.yml from the latest run under artifacts
+Failure Run Artifact:  We can Fetch this from https://github.com/ojasrahate/bloggy/actions/workflows/bugs_in_app.yml from the latest run under artifacts
+- **Successful Run Artifact**: [Download here](./successful_playwright.zip)
+- **Failure Run Artifact**: [Download here](./failure_playwright.zip)
+
+
+The following files and folders contain the results, traces, screenshots, and logs from the latest automated test runs.
+
+### 1. Test Results
+Folder: `test-results/`
+
+- **Trace File:** [trace.zip](./test-results/trace.zip) – Contains Playwright trace for debugging failed tests.  
+- **Screenshots:** [Screenshot folder](./test-results/Screenshot) – Screenshots captured during test failures.  
+- **Error Logs:** [Error.md](./test-results/Error.md) – Consolidated error logs from the test run.
+
+### 2. Playwright Report
+Folder: `playwright-report/`
+
+- **HTML Report:** [index.html](./playwright-report/index.html) – Interactive Playwright test report.  
+- **Supporting Data:** `data/` – Raw data used by the HTML report.  
+- **Trace Folder:** `trace/` – Trace files for detailed inspection of test execution.
+
+### 3. Test Setup Logs
+- **Setup Log:** [test setup log](./test-setup-log.txt) – Terminal output from environment setup and seeding.
+
+---
+
+### How to Use
+
+- Open **index.html** in `playwright-report/` in a browser for a full interactive test report.  
+- Use **trace.zip** with Playwright CLI (`npx playwright show-trace trace.zip`) to replay failed tests step by step.  
+- Check **Error.md** and **Screenshots** for quick debugging of failures.  
 
 ---
 
