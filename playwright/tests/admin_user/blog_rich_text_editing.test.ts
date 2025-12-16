@@ -226,7 +226,7 @@ test('Test Link Insert', async ({ page }) => {
 });
 
 
-test('Test Clean Editor ', async ({ page }) => {
+test('Test Format Editor ', async ({ page }) => {
   // Reusable strings
   page.goto('/admin/blog/1')
 

@@ -1,0 +1,390 @@
+# Automation Framework Choice: Playwright
+
+## Overview
+
+For this project, I chose **Playwright** as the test automation framework. The decision was based on its modern architecture, strong reliability, and excellent support for end-to-end testing of web applications.
+
+---
+
+## Why Playwright
+
+Playwright provides a robust solution for testing modern web applications by offering cross-browser support, fast execution, and built-in mechanisms to reduce flaky tests. It fits well for both **local development** and **CI/CD pipelines**, making it a practical choice for scalable automation.
+
+---
+
+## Pros of Using Playwright
+
+* **Cross-browser support by default**
+  Easily test Chromium, Firefox, and WebKit using a single test suite.
+
+* **Auto-waiting and smart assertions**
+  Reduces the need for manual waits and minimizes flaky test failures.
+
+* **Fast execution**
+  Parallel test execution and efficient browser control lead to quicker feedback.
+
+* **Excellent debugging capabilities**
+  Includes Playwright Inspector, trace viewer, screenshots, and video recording.
+
+* **Strong TypeScript support**
+  Improves code quality, maintainability, and developer experience.
+
+* **Supports both UI and API testing**
+  Enables end-to-end workflows combining backend setup with frontend validation.
+
+---
+
+## Why Playwright Is Better Than Cypress
+
+- **True cross-browser support**  
+  Supports Chromium, Firefox, and WebKit (Safari) out of the box.
+
+- **Handles multiple tabs and windows**  
+  Native support for multi-tab and multi-window scenarios.
+
+- **Built-in parallel execution**  
+  Runs tests in parallel by default without extra services or setup.
+
+- **More realistic end-to-end testing**  
+  Does not inject runtime code into the browser, closer to real user behavior.
+
+- **Stronger CI and debugging tooling**  
+  Built-in tracing, screenshots, videos, retries, and HTML reports.
+
+
+## Why Playwright Is Better Than Selenium
+
+- **Faster and more reliable execution**  
+  Built-in auto-waiting removes the need for explicit waits and reduces flakiness.
+
+- **Modern architecture**  
+  Direct browser control without WebDriver leads to more stable tests.
+
+- **Built-in tooling out of the box**  
+  Tracing, screenshots, videos, and HTML reports without extra libraries.
+
+- **Easy setup and configuration**  
+  Minimal boilerplate compared to Selenium’s driver and framework setup.
+
+- **First-class support for modern web apps**  
+  Better handling of SPAs, network requests, iframes, and async behavior.
+
+
+## Conclusion
+
+Playwright offers a strong balance of **speed, stability, and developer productivity**. Despite minor limitations, it is an excellent choice for automating modern web applications and building reliable, maintainable test suites.
+
+
+
+# Local Installation & Setup Guide
+
+This document explains how to set up and run the project **locally** using terminal commands. These steps mirror what happens in CI but are written for local development and testing.
+
+---
+
+## 1. Install Node.js (v18)
+
+Ensure **Node.js 18** is installed on your system.
+
+```bash
+node -v
+```
+
+If not installed, use one of the following:
+
+```bash
+# Using nvm (recommended)
+nvm install 18
+nvm use 18
+```
+
+---
+
+## 2. Install Project Dependencies
+
+From the project root directory, install dependencies using a clean install:
+
+```bash
+npm ci
+```
+
+---
+
+## 3. Install Playwright Browsers
+
+Install Playwright-supported browsers and required system dependencies:
+
+```bash
+npx playwright install --with-deps
+```
+
+---
+
+## 4. Start Backend & Frontend
+
+Start the backend and frontend services together. Logs will be written to `app.log` and the process will run in the background.
+
+```bash
+npm run dev > app.log 2>&1 &
+echo "App started"
+```
+
+---
+
+## 5. Wait for Frontend to Be Ready
+
+Ensure the frontend is running and accessible before proceeding:
+
+```bash
+npx wait-on http://localhost:5173
+```
+
+---
+
+## 6. Install Playwright Test Dependencies
+
+Navigate to the Playwright directory and install its dependencies:
+
+```bash
+cd playwright
+npm ci
+```
+
+---
+
+## 7. Run Playwright for All Tests(Excluding Genuine Bugs)
+
+Navigate to the Playwright directory and install its dependencies:
+
+```bash
+cd playwright
+npx playwright test --grep-invert @bugs --workers=1
+```
+
+---
+
+## 8. Run Playwright for Bugs in App(We expect these to fail)
+
+Navigate to the Playwright directory and install its dependencies:
+
+```bash
+cd playwright
+npx playwright test --grep @bugs --workers=1
+```
+
+---
+
+# Test Coverage Summary
+
+## Overview
+The automation suite covers **UI, API, and end-to-end flows** for a blog application, validating functionality across **Admin users, Public users, and API consumers**.  
+A total of **51 automated tests** have been executed successfully. While most happy paths were executed via UI, API focused more on negative cases which otherwise would consume heavy UI Bandwidth and resources.
+
+---
+
+## Coverage Breakdown
+
+### 1. Admin User – Blog Management (UI)
+**Covered**
+- Create blog as draft
+- Publish draft blog
+- Create published blog
+- Edit blog title, excerpt, and description
+- Add images to blog
+- Rich text editor features:
+  - Headers
+  - Bold, Italic, Underline, Strikethrough
+  - Ordered & bullet lists
+  - Text color & background
+  - Image upload
+  - Link insertion
+  - Format editor
+- Blog listing actions:
+  - Pagination toggle
+  - View blog
+  - Edit blog
+  - Delete blog and pagination adjustment
+
+**Total Coverage:** Blog CRUD + editor behavior fully validated
+
+---
+
+### 2. Authentication & Authorization
+**Covered**
+- Negative login scenarios:
+  - Wrong credentials
+  - Empty / partial submissions
+- Duplicate user registration (API & UI)
+- Unauthorized API access restrictions
+
+---
+
+### 3. API Testing
+**Covered**
+- Blog creation validation:
+  - Missing title, content, category, excerpt
+  - Multiple missing fields
+- Authentication validation:
+  - Unauthenticated blog creation blocked
+  - Duplicate user registration
+- Comment API validation:
+  - Unauthorized comment
+  - Missing content
+  - Missing author
+  - Exceeding max content length
+- Miscellaneous:
+  - Access deleted blog via API
+  - Validate public blog schema
+
+---
+
+### 4. Public & Admin Shared User Flows (UI)
+**Covered for both Public and Admin users**
+- View blog details
+- Read-more navigation
+- Like a blog
+- Comment on a blog
+- Home page actions:
+  - Read icon persistence
+  - Home navigation
+  - Pagination toggle
+  - Light/Dark mode persistence across sessions
+- Search functionality:
+  - Valid search
+  - Invalid search parameters
+
+---
+
+### 5. User Registration (UI)
+**Covered**
+- Successful user registration
+- Password length validation
+- Existing user registration error
+
+---
+
+## Test Coverage Summary (High Level)
+
+| Area                        | Coverage Status |
+|----------------------------|-----------------|
+| Blog CRUD (Admin)          | ✅ Covered |
+| Rich Text Editor           | ✅ Covered |
+| Blog Listing & Pagination  | ✅ Covered |
+| Authentication (Negative)  | ✅ Covered |
+| API Validations            | ✅ Covered |
+| Public User Interactions   | ✅ Covered |
+| Theme Persistence          | ✅ Covered |
+| Search Functionality       | ✅ Covered |
+
+---
+
+## Identified Gaps / Future Enhancements
+
+- ❌ Uploading unsupported image formats (non-JPEG/PNG)
+- ❌ View counter validation for user actions
+- ❌ Remove or replace uploaded images
+
+
+---
+
+## Conclusion
+The current test suite provides **strong functional confidence** across critical user journeys, admin workflows, and API validations. The identified gaps represent **enhancement opportunities** rather than core functionality risks.
+
+
+## Additional Test Scenarios (Not Implemented Due to Time Constraints)
+
+The following test cases were identified as valuable but could not be implemented within the given time frame. These represent **future enhancements** to further strengthen test coverage and robustness.
+
+---
+
+### 1. Blog Media Handling
+- Upload unsupported file formats (PDF, SVG, GIF, DOC) and validate error handling
+- Upload very large images and validate size limits
+- Verify image alt-text and accessibility attributes
+
+---
+
+### 2. Blog Draft Management Edge Cases
+- Verify that a blog saved as draft does not appear on the public listing.
+- Verify that draft blogs can be edited multiple times and state persists until published.s
+
+---
+
+### 3. Security & Authorization
+- Verify JWT expiration handling for admin actions
+
+---
+
+### 4. Blog Publish/Unpublish Workflow
+- Test unpublishing a blog after it was published, and verify it disappears from public view.
+- Ensure notifications or view counts don’t increment for unpublished drafts.
+
+---
+
+### 6. Cross-Browser & Device Coverage
+- Testing it across various browsers and possibility of devices
+
+---
+
+### 7. Negative & Edge UI Scenarios
+- Network failure during blog creation or edit
+- Session timeout during form submission
+- Browser refresh during editor interactions
+
+---
+
+### 7. Empty States/Validations Across Apps
+- New user with empty state
+- Deleting all blogs and admin view
+- Deleting all blogs and public view
+- Empty Blog Publishing Validations
+
+---
+
+## Note
+These scenarios were consciously deprioritized to focus on **core functionality, stability, and critical user flows** within the available time. The current test suite is structured to allow easy extension to cover these cases in future iterations.
+
+
+## Possible Optimizations & Improvements
+
+The following optimizations were identified to improve **test performance, stability, and maintainability** of the automation suite.
+
+---
+
+### 1. Test Execution Performance
+- Parallelize long-running UI test suites more aggressively
+- Split UI and API tests into separate CI jobs
+- Reuse authenticated storage state instead of logging in repeatedly
+
+---
+
+### 2. Test Stability & Flakiness Reduction
+- Prefer API setup over UI setup for preconditions
+- Add network-level assertions instead of UI-only validations
+- Replace fixed waits with event- or state-based assertions
+- Introduce retries only for known flaky scenarios
+
+---
+
+### 3. Test Data Management
+- Centralize test data creation and cleanup via the seed file and higher number of seed files which can run on basis on each test requirements.
+- Isolate test data per worker to avoid cross-test pollution
+- Add automated cleanup hooks for created entities
+
+---
+
+### 4. Framework & Code Structure
+- Introduce reusable fixtures for common flows (auth, blog setup)
+- Apply Page Object Model consistently across UI tests
+- Enforce linting and formatting for test code
+
+---
+
+### 5. CI/CD & Reporting
+- Add test tagging to selectively run smoke, regression, or API suites
+- Fail fast on critical test failures
+
+---
+
+## Summary
+These optimizations focus on **faster feedback, reduced flakiness, and long-term scalability**, ensuring the test suite remains reliable as the application grows.
