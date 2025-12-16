@@ -12,7 +12,7 @@ jobs:
     timeout-minutes: 30
 
     env:
-      JWT_SECRET: abc123
+      JWT_SECRET: ${{ secrets.JWT_SECRET_CI }}
 
     steps:
       - name: Checkout repo
