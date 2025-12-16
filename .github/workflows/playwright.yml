@@ -6,41 +6,49 @@ on:
 jobs:
   playwright:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     env:
-      JWT_SECRET: abc123   # 👈 same as local
+      JWT_SECRET: abc123
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Start app (backend + frontend)
-        run: npm run dev &
-        # 👆 runs in background like locally
+      - name: Reset & seed database
+        run: |
+          npm run reset --workspace=server
+          npm run seed --workspace=server
 
-      - name: Wait for app to be ready
+      - name: Start backend & frontend
+        run: |
+          npm run dev > app.log 2>&1 &
+          echo "App started"
+
+      - name: Wait for frontend
         run: npx wait-on http://localhost:5173
-        # adjust port if needed
 
       - name: Run Playwright tests
         run: npx playwright test
-        working-directory: playwright
 
-      - name: Upload Playwright Report
+      - name: Upload Playwright artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
-          path: playwright-report
+          name: playwright-artifacts
+          path: |
+            playwright-report
+            test-results
+            app.log
