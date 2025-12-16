@@ -1,5 +1,8 @@
 import { Page, expect, Locator } from '@playwright/test';
 import { fuzzyClass } from '../utils/helper';
+import {
+  goToNextPage,
+} from './homePage';
 
 export async function deleteBlogByTitle(page: Page, title: string) {
   const rowLocator = page.locator('tr').filter({ hasText: title });
@@ -55,6 +58,11 @@ export async function blogActionByTitle(
     await expect(row).toHaveCount(0);
     return;
   }
+  
+  if (await button.count() === 0) {
+  // Button doesn't exist → go to next page
+  await goToNextPage(page);
+  } 
 
   // View / Edit
   await Promise.all([
