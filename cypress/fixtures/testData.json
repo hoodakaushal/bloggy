@@ -1,0 +1,21 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "admin123"
+  },
+  "blog": {
+    "title": "Test Blog Post",
+    "content": "This is a test blog post content with some <strong>rich text</strong> formatting.",
+    "excerpt": "This is a test excerpt",
+    "category": "Technology",
+    "tags": "JavaScript, TypeScript, React",
+    "status": "published"
+  },
+  "search": {
+    "keyword": "JavaScript"
+  },
+  "blogToView": {
+    "title": "Getting Started with TypeScript"
+  }
+}
+

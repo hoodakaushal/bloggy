@@ -41,3 +41,12 @@ tmp/
 temp/
 
 server/uploads/
+
+# Cypress
+cypress/reports/videos/
+cypress/reports/screenshots/
+cypress/reports/assets/
+cypress/downloads/
+cypress/reports/*.json
+cypress/reports/*.html
+cypress/reports/merged-report.json

@@ -17,10 +17,22 @@
     "build:client": "npm run build --workspace=client",
     "start": "npm run start --workspace=server",
     "seed": "npm run seed --workspace=server",
-    "reset": "npm run reset --workspace=server"
+    "reset": "npm run reset --workspace=server",
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:headless": "cypress run --headless",
+    "test:report": "cypress run && npm run test:merge-reports",
+    "test:merge-reports": "mochawesome-merge cypress/reports/*.json -o cypress/reports/merged-report.json && mochawesome-report-generator cypress/reports/merged-report.json -o cypress/reports/html"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "@types/node": "^25.0.6",
+    "concurrently": "^8.2.2",
+    "cypress": "^14.5.4",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=20.0.0"

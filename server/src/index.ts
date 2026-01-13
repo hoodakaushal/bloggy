@@ -16,6 +16,14 @@ const __dirname = path.dirname(__filename);
 // Load environment variables
 dotenv.config();
 
+// Validate required environment variables
+if (!process.env.JWT_SECRET) {
+  console.warn(
+    "WARNING: JWT_SECRET not set. Using default development secret."
+  );
+  process.env.JWT_SECRET = "development-secret-key-change-in-production";
+}
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
