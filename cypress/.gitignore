@@ -1,0 +1,14 @@
+# Cypress videos and screenshots (now inside reports)
+reports/videos/
+reports/screenshots/
+reports/assets/
+downloads/
+
+# Reports (keep structure but ignore generated files)
+reports/*.json
+reports/*.html
+reports/merged-report.json
+
+# Keep reports directory structure
+!reports/.gitkeep
+
